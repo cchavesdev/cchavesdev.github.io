@@ -9,8 +9,24 @@
 }
 .container-xxl {
   max-width: 1513px;
+  padding-left: 10px;
 }
 //Primary colors
+.bg-darkBlue {
+  background-color: $dark-blue;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-white{
+  background-color: #FFFFFF;
+}
+
+
+//Eliminar
 .bg-red {
   background-color: $red;
 }
@@ -24,6 +40,24 @@
 .bg-black {
   background-color: $black;
 }
+.bg-river {
+  background-color: $river;
+}
+.bg-forest {
+  background-color: $forest;
+}
+.bg-orange {
+  background-color: $orange;
+}
+.bg-fog {
+  background-color: $fog;
+}
+.bg-snow {
+  background-color: $snow;
+}
+
+//Eliminar
+
 .bg-dark {
   background-color: $dark;
 }
@@ -36,33 +70,34 @@
 .bg-dark-2 {
   background-color: $bg-dark-2;
 }
+
+
+
 .text-bg {
   margin-top: 140px;
   display: flex;
-  & .white,
-  .dark {
+  & .left,
+  .rigth {
     width: 50%;
     display: flex;
     justify-content: flex-end;
     padding-top: 80px;
     padding-bottom: 110px;
-  }
-
-  & .white {
     background-color: #deeaf4;
     color: $p-color-2;
+  }
+
+  & .left {
     & .info {
       max-width: 755px;
       padding-right: 125px;
     }
   }
-  & .dark {
-    background-color: $black;
-    color: white;
+  & .rigth {
     justify-content: flex-start;
+    padding-top: 207px;
     & .info {
       max-width: 755px;
-      padding-left: 272px;
     }
   }
 }
@@ -261,8 +296,14 @@
 }
 
 //Borders
-.border-red {
-  border: 1px solid $red;
+.border-blue {
+  border: 1px solid $blue;
+}
+//Borders
+.border-r-blue {
+  border-right: 1px solid $blue;
+  width: 0px;
+  height: 100%;
 }
 
 //Paddings
@@ -352,6 +393,9 @@
 .pt-25{
   padding-top: 200px;
 }
+.pt-150{
+  padding-top: 150px;
+}
 .pt-300 {
   padding-top: 300px;
 }
@@ -405,19 +449,31 @@
 .pl-300 {
   padding-left: 300px;
 }
-
+ //Paddin button
+ .pb-150{
+  padding-bottom: 150px;
+ }
 
 //margin
+.mt-24{
+  margin-top: 24px;
+}
+.mt-50{
+  margin-top: 50px;
+}
+.mt-80-responsive{
+  margin-top: 80px;
+}
 .mt-140{
   margin-top: 140px;
 }
 //HR
-.hr-red {
-  border-top: 2px solid $red;
+.hr-blue {
+  border-top: 2px solid $blue;
   opacity: 1;
 }
-.hr-yellow {
-  border-top: 2px solid $yellow;
+.hr-orange {
+  border-top: 2px solid $orange;
   opacity: 1;
 }
 
@@ -439,14 +495,14 @@
 
 @media (max-width: 1524px) {
   .text-bg {
-    & .white {
+    & .left {
       padding-left: 30px;
       & .info {
         max-width: 100%;
         padding-right: 125px;
       }
     }
-    & .dark {
+    & .rigth {
       justify-content: flex-start;
       padding-right: 30px;
       & .info {
@@ -470,15 +526,25 @@
   } 
 
   .text-bg {
-    & .white,
-    .dark {
+    & .left,
+    .rigth {
       width: 100%;
       padding-left: 0px;
       padding-right: 0px;
+    }
+    .left{
+      padding-bottom: 40px;
+    }
+    .rigth{
+      padding-top: 0px;
     }
     & .info {
       padding-left: 16px !important;
       padding-right: 16px !important;
     }
+  }
+
+  .mt-80-responsive{
+    margin-top: 40px;
   }
 }

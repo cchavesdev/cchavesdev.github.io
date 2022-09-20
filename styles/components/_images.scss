@@ -4,88 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px;
+  height: 860px;
 }
 
-.hero-menu {
-  border-bottom: 1px solid rgba($dark, $alpha: 0.3);
-  & ul {
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-    margin: 0px;
-    & li {
-      padding: 16px;
-
-      & a {
-        color: $dark;
-        font-family: $radio-canada-semibold;
-        font-size: 20px;
-        text-transform: uppercase;
-      }
-    }
-    & li.active,
-    li:hover {
-      border-bottom: 2px solid $red;
-
-      & a {
-        color: $red;
-      }
-    }
-  }
-}
-
-.hero {
-  height: 450px;
-  background-image: url(../img/bg-hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  & .hero-menu {
-    border-bottom: 1px solid rgba(white, $alpha: 0.3);
-
-    & ul {
-      & li {
-        & a {
-          color: white;
-          font-family: $radio-canada-semibold;
-        }
-      }
-      & li.active,
-      li:hover {
-        border-bottom: 2px solid $yellow;
-
-        & a {
-          color: $yellow;
-        }
-      }
-    }
-  }
-}
-
-.hero-white{
-  background-image: url(../img/bg-hero-white.jpg);
-  background-position: top;
-
-  .menu-red {
-    & ul {
-      & li {
-        & a {
-          color: $p-color !important;
-        }
-      }
-      & li.active,
-      li:hover {
-        border-bottom: 2px solid $red !important;
-  
-        & a {
-          color: $red !important;
-        }
-      }
-    }
-  }
-  
-}
 
 
 
@@ -103,40 +24,17 @@
 }
 
 .listing-images {
-  @include img(445px, 420px);
+  @include img(445px, 400px);
 }
-.promo-images {
-  @include img(600px, 420px);
+.slideshow-images {
+  @include img(1400px, 650px);
 }
 
 @media (max-width: 635px) {
   .hero-container {
     font-size: 50px;
-    height: 350px;
+    height: max-content;
+    min-height: 812px;
   }
-  .hero-menu {
-    & ul {
-      justify-content: space-between;
-      padding-top: 16px;
-
-      & li {
-        padding: 0px;
-        & a {
-          font-family: $radio-canada-regular !important;
-          font-size: 12px;
-        }
-      }
-      & li.active,
-      li:hover {
-        & a {
-          font-family: $radio-canada-bold !important;
-        }
-      }
-    }
-  }
-
-  .hero {
-    height: 350px;
-    background-position: center;
-  }
+ 
 }

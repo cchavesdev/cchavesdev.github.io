@@ -1,25 +1,35 @@
+
+
 @font-face {
-  font-family: $radio-canada-regular;
-  src: url(../fonts/RadioCanada-Regular.ttf);
+  font-family: $noto-sans-regular;
+  src: url(../fonts/NotoSans-Regular.ttf);
 }
 @font-face {
-  font-family: $radio-canada-bold;
-  src: url(../fonts/RadioCanada-Bold.ttf);
+  font-family: $noto-sans-light;
+  src: url(../fonts/NotoSans-Light.ttf);
 }
 @font-face {
-  font-family: $radio-canada-light;
-  src: url(../fonts/RadioCanada-Light.ttf);
+  font-family: $noto-sans-bold;
+  src: url(../fonts/NotoSans-Bold.ttf);
 }
 @font-face {
-  font-family: $radio-canada-semibold;
-  src: url(../fonts/RadioCanada-SemiBold.ttf);
+  font-family: $gilroy;
+  src: url(../fonts/Gilroy-Light.otf);
+}
+@font-face {
+  font-family: $white-oleander;
+  src: url(../fonts/WhiteOleander.ttf);
 }
 
+
 .text-regular{
-    font-family: $radio-canada-regular;
+    font-family: $noto-sans-regular;
+}
+.gilroy{
+  font-family: $gilroy;
 }
 strong {
-  font-family: $radio-canada-bold;
+  font-family: $noto-sans-bold;
 }
 a {
   text-decoration: none;
@@ -28,12 +38,23 @@ ul {
   list-style: none;
 }
 
+p{
+  line-height: 32px;
+}
 //headings
+h1, h2 , h3, h4, h5 , h6{
+  font-family: $gilroy;
+}
+
 h1 {
   font-size: 64px;
 }
 h2 {
   font-size: 48px;
+
+  & span{
+    font-size: 24px;
+  }
 }
 h3 {
   font-size: 40px;
@@ -43,23 +64,31 @@ h4 {
 }
 h5 {
   font-size: 24px;
-  font-family: $radio-canada-semibold;
+}
+
+.secondary-title{
+  font-family: $white-oleander;
+}
+
+//sizes
+.f-36{
+  font-size: 36px;
 }
 
 //Links
 
-.link-yellow {
-  color: $yellow;
+.link-orange {
+  color: $orange;
   text-decoration: underline;
   &:hover{
-    color: $yellow;
+    color: $orange;
   }
 }
-.link-red {
-  color: $red;
+.link-blue {
+  color: #3D6EB2;
   text-decoration: underline;
   &:hover{
-    color: $red;
+    color: #3D6EB2;
   }
 }
 
@@ -135,6 +164,12 @@ p {
   font-size: 18px;
 }
 blockquote {
-  font-family: $radio-canada-light;
+  font-family: $noto-sans-light;
   font-size: 18px;
+}
+
+
+//line height
+.lh-36{
+  line-height: 36px;
 }

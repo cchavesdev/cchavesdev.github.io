@@ -1,279 +1,249 @@
+.close-menu {
+  position: relative;
+  z-index: 11;
+}
 header {
-  padding: 16px 0px 16px 0px;
-  transition: background-color ease-in .2s;
-
-  .trails {
-    font-size: 18px;
-  }
-
-  & button {
-    border: none;
-    background: transparent;
-    width: 20px;
-    height: 20px;
-
-    & img {
-      height: 20px;
-    }
-  }
-
-  .gap-4 {
-    gap: 40px !important;
-  }
-  & .hamburger {
-    width: 20px;
-    height: 20px;
-    & .line {
-      width: 20px;
-      height: 3px;
-      border-radius: 8px;
-      background-color: $red;
+  position: absolute;
+  width: 100%;
+  background-color: $light1;
+  z-index: 2;
+  .logo-container {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    & .logo {
       position: relative;
-      transition: all ease-in .3s;
-    }
-    & .line::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 10px;
-      width: 11px;
-      height: 3px;
-      border-radius: 8px;
-      background-color: $red;
-      transition: all ease-in .3s;
-    }
-  }
-  .main-menu{ 
-    padding: 0px;
-    border-bottom: 1px solid $yellow;
-    & ul {
-      display: flex;
-      justify-content: space-between;
-      padding: 0px;
-      margin: 0px;
-
-      & li:first-child{
-        padding-left: 0px;
-      }
-      & li:last-child{
-        padding-right: 0px;
-      }
-      & li {
-        padding: 16px;
-  
-        & a {
-          color: white;
-          font-family: $radio-canada-semibold;
-          font-size: 20px;
-          text-transform: uppercase;
-        }
-      }
-      & li.active,
-      li:hover {
-        & a {
-          color: $yellow;
-        }
-      }
-    }
-    & .search-btn{ 
-      padding-left: 5px;
-      padding-right: 5px;
-      width: max-content;
-      & input{
-        display: none;
-      }
+      z-index: 11;
     }
   }
 
-  & .secondary-menu{
-    padding-left: 0px;
-    padding-top: 30px;
+  .main-menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: $light1;
+    top: 0;
+    padding-top: 150px;
+    transform: translateY(-100%);
+    transition: transform ease-in 0.2s;
 
-    & li{
-      font-size: 18px;
-      color: white;
-    }
-    & ul{
-      padding-left: 0px;
-      & li{
-        margin-top: 16px;
-      }
-      & a{
-        color: $yellow;
-      }
-    }
-
-  }
-
-  & .menu-show{
-    transition: all ease-in .3s;
-    min-height: 0px;
-    max-height: 0px;
-    overflow: hidden;
-  }
-}
-
-header.active {
-  background-color: $black;
-  
-  & .logo{
-    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(48deg) brightness(111%) contrast(100%);
-  }
-  .trails {
-    color: white;
-  }
-
-  & button {
-    & img {
-        filter: brightness(0) saturate(100%) invert(90%) sepia(37%) saturate(3755%) hue-rotate(333deg) brightness(106%) contrast(101%);;
-    }
-  }
-
-  & .hamburger {
-    margin-top: 5px;
-    width: 22px;
-    & .line {
-      width: 22px;
-      background-color: $yellow;
-      transform: rotate(45deg);
-      
-    }
-    & .line::after {
-      content: "";
-      top: 0px;
-      width: 22px;
-      background-color: $yellow;
-      transform: rotate(-90deg);
-    }
-  }
-
-  & .menu-show{
-    display: flex;
-    max-height: 2000px;
-    min-height: 100px;
-  }
-
-  
-}
-
-@media (max-width: 767px){
-  header{
-    & .logo{
-      width: 59px;
-    }
-    & .trails{
-      font-size: 15px;
-    }
-    & button {
-      width: 15px;
-      height: 15px;
-  
-      & img {
-        height: 15px;
-      }
-    }
-    & .hamburger {
-      width: 15px;
-      height: 15px;
-      & .line {
-        width: 15px;
-        height: 2px;
-      }
-      & .line::after{
-        top: 7px;
-        height: 2px;
-      }
-    }
-
-    & .main-menu{
-      & ul{
-        flex-direction: column;
-        & li{
-          padding: 8px !important;
-          margin-top: 8px;
-        }
-      }
-
-      & .search-btn{
+    .dropdown-item-submenu {
+      font-size: 48px;
+      margin-top: 15px;
+      & span {
         width: 100%;
-        position: relative;
-        height: auto;
-        & input{
-          color: white;
-          display: block;
-          background-color: #262626;
-          &::-webkit-input-placeholder{
-            color: white;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        & img {
+          transition: all ease-in 0.2s;
+        }
+      }
+      & ul {
+        max-height: 0px;
+        overflow: hidden;
+        transition: all ease-in 0.2s;
+        & li {
+          font-size: 24px;
+          padding: 10px 0px;
+          & a {
+            color: $p-color;
           }
         }
-        & img{
-          position: absolute;
-          top: 0;
-          right: 0;
-          margin-top: 18px;
-          margin-right: 20px;
-          width: 20px;
-          height: 20px;
-        }
       }
     }
-    
-    & .secondary-menu{
 
-      & .dropdown-item-submenu{
-        position: relative;
-        &::after{
-          content: '';
-          position: absolute;
-          background-image: url(../img/down-icon.svg);
-          filter: invert(80%) sepia(87%) saturate(480%) hue-rotate(336deg) brightness(100%) contrast(102%);
-          background-repeat: no-repeat;
-          background-size: contain;
-          top: 0;
-          right: 0;
-          margin-top: 5px;
-          height: 0;
-          width: 22px;
-          height: 15px;
-          transition: transform ease-in .2s;
+    & .active {
+      color: $blue;
+      & span {
+        & img {
+          transform: rotate(180deg);
         }
-        & ul{
-          transform: scaleY(0);
-          transform-origin: top;
-          height: 0;
-          overflow: hidden;
-          transition: transform ease-in .2s;
+      }
+      & ul {
+        max-height: 1000px;
+      }
+    }
+  }
+  .menu-sections{
+    & .hide-container {
+      position: absolute;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+      transition: all ease-in 0.3s;
+      background-color: $light1;
+      
+    }
+    & .active{
+      max-height: 100vh;
+      padding: 54px 0px;
+    }
+  }
   
+  .active {
+    transform: translateY(0);
+    max-height: 100vh;
+  }
+
+  .info-snow-report {
+    color: #4b4a2f;
+    & .item {
+      font-size: 16px;
+    }
+
+    & .value {
+      font-size: 32px;
+    }
+  }
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  & .hero-info {
+    background-color: $black;
+    min-width: 775px;
+    color: white;
+    padding: 64px 64px 80px 64px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 48px;
+    margin-bottom: -87px;
+
+    & p {
+      font-family: $gilroy;
+      width: 100%;
+      max-width: 440px;
+    }
+  }
+  & .hero-info::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgb(103, 173, 167);
+    background: linear-gradient(
+      180deg,
+      rgba(103, 173, 167, 1) 0%,
+      rgba(103, 173, 167, 1) 16%,
+      rgba(117, 134, 70, 1) 16%,
+      rgba(117, 134, 70, 1) 37%,
+      rgba(39, 69, 107, 1) 37%,
+      rgba(39, 69, 107, 1) 60%,
+      rgba(61, 110, 178, 1) 60%,
+      rgba(61, 110, 178, 1) 85%,
+      rgba(212, 123, 58, 1) 85%
+    );
+  }
+}
+
+
+@media (max-width:992px){
+  header{
+    .logo-container {
+      position: static;
+      margin: 0px;
+      & .logo{
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media(max-width: 992px){
+  .secundary-nav{
+    display: none !important;
+  }
+}
+@media (max-width: 858px) {
+  .full-report{
+    width: 100%;
+  }
+ 
+  .menu-nav{
+    position: relative;
+    z-index: 11;
+  }
+
+  header{
+    position: fixed;
+    .main-menu {
+      position: fixed;
+      padding-top: 90px;
+      background: linear-gradient(0deg, rgba(255,255,255,.9), rgba(255,255,255,1));
+      & ul{
+        padding: 0px;
+      }
+      .dropdown-item-submenu {
+        font-size: 32px;
+        margin-top: 25px;
+        & ul {
+
+          & li {
+            font-size: 20px;
+           
+          }
         }
       }
 
       & .active{
-        color: white;
-        font-size: 18px;
-        &::after{
-          transform: rotate(-180deg);
-        }
-        & ul{
-          height: auto;
-          transform: scaleY(1);
-        }
+      min-height: auto;
       }
-     
-    
-    }
-    
   
+      
+    }
+
+    & .active{
+      min-height: 100vh;
+    }
   }
 
-  header.active{
-    & .hamburger {
-      & .line {
-        width: 16px;
-        
+  .btn-bookNow{
+    position: absolute;
+    bottom: 0;
+    z-index: 12;
+    margin-bottom: 106px;
+    width: 100%;
+    & button{
+      width: 100%;
+    }
+  }
+
+  .hero {
+    background-image: url(../img/hero.jpg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    & .hero-info {
+      position: relative;
+      width: 100%;
+      padding: 50px 20px;
+      min-width: 100px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+
+      & p {
+        font-family: $gilroy;
+        width: 100%;
+        max-width: 440px;
+        font-size: 16px;
       }
-      & .line::after {
-        top: 0px;
-        width: 16px;
+
+      & a{
+        width: 100%;
+        text-align: center;
       }
     }
   }

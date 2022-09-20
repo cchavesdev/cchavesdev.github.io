@@ -15,362 +15,324 @@
     <title>Library</title>
   </head>
   <body>
-    <!-- Header -->
+    <!-- HEADER -->
     <header>
-      <div class="container px-0">
-        <div class="row">
-          <div class="col-3">
-            <img src="img/logo.svg" class="logo" alt="Logo Image" />
+      <div class="container-xxl py-4">
+        <div class="row justify-content-between">
+          <div
+            class="col-3 col-lg-2 menu-nav col-xxl-1 d-flex align-items-center justify-content-between"
+          >
+            <button
+              class="hamburger-menu btn-trigger headerFn"
+              data-triger="main-nav"
+            >
+              <img src="img/hamburger.svg " alt="Hamburger button icon" />
+            </button>
+            <button class="search-btn">
+              <img src="img/search.svg" alt="Search icon" />
+            </button>
           </div>
           <div
-            class="col-9 d-flex justify-content-end align-content-center gap-3 gap-md-4 pt-1"
+            class="col-3 d-flex justify-content-end justify-content-lg-center logo-container"
           >
-            <p class="trails">Trails: 37 | Lifts: 3</p>
-            <button><img src="img/plus.svg" alt="Plus icons" /></button>
-            <button>
-              <img
-                src="img/Icon_feather-shopping-cart.svg"
-                alt="Shopping cart icon"
-              />
+            <a href="#" class="logo">
+              <img src="img/logo.svg" alt="Logo Windham" />
+            </a>
+          </div>
+          <div
+            class="col-lg-8 d-flex align-items-center justify-content-end gap-2 secundary-nav"
+          >
+            <button class="btn-trigger headerFn" data-triger="snow-report">
+              SNOW REPORT
             </button>
-            <button class="hamburger" id="hamburger-btn">
-              <div class="line"></div>
+            <button
+              class="main-button btn-trigger headerFn"
+              data-triger="book-now"
+            >
+              BOOK NOW
             </button>
+          </div>
+          <div class="col-3 close-menu d-flex justify-content-end d-none">
+            <button><img src="img/x-icon.svg" alt="Close icon" /></button>
           </div>
         </div>
-        <div class="row menu-show">
-          <!-- Primary Menu -->
-          <nav class="main-menu">
-            <ul class="primary">
-              <li class="order-2 order-md-1"><a href="#">SNOW REPORT</a></li>
-              <li class="order-3 order-md-2"><a href="#">TRAIL MAP</a></li>
-              <li class="order-4 order-md-3"><a href="#">EVENTS</a></li>
-              <li class="order-5 order-md-4"><a href="#">FIRST TIMERS GUIDE</a></li>
-              <li class="order-5 order-md-5"><a href="#">REAL STATE</a></li>
-              <li class="order-1 order-md-5">
-                <button class="search-btn">
-                  <input type="text" class="form-control input-yellow" placeholder="Search">
-                  <img src="img/search-icon.svg" alt="Search icon" />
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <!-- Secondary Menu -->
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">SHOPPING
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+      </div>
+
+      <!-- Open Menu -->
+      <div class="main-menu div-trigger" data-triger="main-nav">
+        <div class="container-xxl">
+          <div class="row justify-content-center">
+            <nav class="col-12 col-md-6">
+              <ul>
+                <li class="dropdown-item-submenu">
+                  <span
+                    >On the Mountain
+                    <img src="img/up-blue.svg" alt="Up arrow image"
+                  /></span>
+                  <ul>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Webcams</a></li>
+                    <li><a href="">Trail Map</a></li>
+                    <li><a href="">Terrain Parks</a></li>
+                    <li><a href="">Mountain Stats</a></li>
+                    <li><a href="">Mountain Stories</a></li>
+                    <li><a href="">Uphill Access</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-item-submenu">
+                  <span
+                    >Plan and Book
+                    <img src="img/up-blue.svg" alt="Up arrow image"
+                  /></span>
+                  <ul>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Webcams</a></li>
+                    <li><a href="">Trail Map</a></li>
+                    <li><a href="">Terrain Parks</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-item-submenu">
+                  <span
+                    >During your Visit
+                    <img src="img/up-blue.svg" alt="Up arrow image"
+                  /></span>
+                  <ul>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Webcams</a></li>
+                    <li><a href="">Trail Map</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">THE MOUNTAIN
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">YOUR VISIT
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu active">TO DO
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+        </div>
+      </div>
+
+      <div class="menu-sections">
+        <!-- BOOK NOW FORM-->
+        <div
+          class="hide-container div-trigger position-relative"
+          data-triger="book-now"
+        >
+          <form action="">
+            <div class="container-xxl">
+              <div class="row justify-content-center">
+                <div class="col-md-3 mt-4 mt-lg-0">
+                  <div class="date-input">
+                    <input
+                      type="date"
+                      name="arribal"
+                      id="arribal"
+                      placeholder="Arribal"
+                      class="form-control input-blue"
+                    />
+                    <label for="arribal">Arribal</label>
+                  </div>
+                </div>
+                <div class="col-md-3 mt-4 mt-lg-0">
+                  <div class="date-input">
+                    <input
+                      type="date"
+                      name="departure"
+                      id="departure"
+                      placeholder="Departure"
+                      class="form-control input-blue"
+                    />
+                    <label for="departure">Departure</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center mt-4">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="adults"
+                      id="adults"
+                      placeholder="Adults"
+                      class="form-control input-blue"
+                    />
+                    <button type="button">
+                      <img src="img/plus-blue.svg" alt="Plus icon" />
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-3 mt-4 mt-lg-0">
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="children"
+                      id="children"
+                      placeholder="Children"
+                      class="form-control input-blue"
+                    />
+                    <button type="button">
+                      <img src="img/plus-blue.svg" alt="Plus icon" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center pt-5 btn-bookNow">
+                <div class="col-md-6 d-flex justify-content-end">
+                  <button type="submit" class="main-button">BOOK NOW</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- SNOW REPORT -->
+        <div class="hide-container div-trigger" data-triger="snow-report">
+          <div class="container-xxl">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <h2 class="f-36 text-center text-lg-start">Today’s Weather</h2>
+                <div class="row justify-content-between mt-5">
+                  <div
+                    class="col-md-5 d-flex justify-content-between pe-0 pe-lg-5"
+                  >
+                    <div
+                      class="d-flex flex-column justify-content-between text-center info-snow-report"
+                    >
+                      <p class="item">HIGH</p>
+                      <p class="value">29º</p>
+                    </div>
+                    <img class="py-3" src="img/snow-icon.svg" alt="Snow icon" />
+                    <div
+                      class="d-flex flex-column justify-content-between text-center info-snow-report"
+                    >
+                      <p class="item">LOW</p>
+                      <p class="value">20º</p>
+                    </div>
+                  </div>
+                  <div class="col-md-2 d-flex justify-content-center">
+                    <div class="line border-r-blue"></div>
+                  </div>
+
+                  <div class="col-md-5 mt-5 mt-lg-0">
+                    <div class="d-flex justify-content-between">
+                      <div
+                        class="info-snow-report d-flex align-items-center flex-column flex-lg-row"
+                      >
+                        <p class="item">Lift</p>
+                        <p class="value pl-2">5</p>
+                      </div>
+                      <div
+                        class="info-snow-report d-flex align-items-center flex-column flex-lg-row"
+                      >
+                        <p class="item">NEW SNOW</p>
+                        <p class="value pl-2">6”</p>
+                      </div>
+                      <div
+                        class="info-snow-report d-flex align-items-center flex-column flex-lg-row"
+                      >
+                        <p class="item">TRAIL</p>
+                        <p class="value pl-2">49</p>
+                      </div>
+                    </div>
+                    <button class="main-button float-end full-report">
+                      FULL REPORT
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <!-- Header End -->
-    
-    <!-- Other navigation -->
-    <div class="container">
-      <nav class="hero-menu">
-        <ul>
-          <li><a href="#">Lift tickets</a></li>
-          <li><a href="#">Season Passes</a></li>
-          <li class="active"><a href="#">Rentals</a></li>
-          <li><a href="#">Lessons</a></li>
-        </ul>
-      </nav>
-    </div>
-     <!-- Other navigation End-->
-    
+    <!-- HEADER END -->
 
-    <!-- PRIMARY FORM -->
-    <form action="" class="pt-6">
-      <div class="container border-red p-4">
-        <div class="row">
-          <div class="col-md-10">
-            <select name="" id="" class="w-100 form-control">
-              <option value="">Adult - 2 Day Ticket</option>
-              <option value="">Adult - 2 Day Ticket</option>
-            </select>
-          </div>
-          <div class="col-md-2 mt-4 mt-md-0">
-            <select name="" id="" class="w-100 form-control">
-              <option value="">1</option>
-              <option value="">2</option>
-            </select>
-          </div>
-        </div>
-        <div class="row pt-6">
-          <div
-            class="col-md-10 d-flex gap-4 justify-content-center justify-content-md-end align-items-center"
-          >
-            <a href=""
-              ><img src="img/Icon_simple-googlepay.svg" alt="Play store Link"
-            /></a>
-            <img src="img/line.svg" alt="" />
-            <a href=""
-              ><img src="img/Icon_awesome-apple-pay.svg" alt="App Store Link"
-            /></a>
-          </div>
-          <div class="col-8 col-md-2 mt-4 mt-md-0 d-block mx-auto">
-            <button type="submit" class="secondary-button w-100 px-1">
-              Add To Cart
-            </button>
-          </div>
-        </div>
+    <!-- HERO -->
+    <div class="hero-container hero">
+      <div class="buttons d-flex d-lg-none flex-column">
+        <button
+          class="btn-trigger headerFn text-white"
+          data-triger="snow-report"
+        >
+          SNOW REPORT
+        </button>
+        <button
+          class="main-button btn-trigger headerFn btn-white mt-3 mb-5"
+          data-triger="book-now"
+        >
+          BOOK NOW
+        </button>
       </div>
-    </form>
-    <!-- PRIMARY FORM END-->
-
-    <!-- HERO  -->
-    <div class="container pt-13">
-      <h1>Hero</h1>
+      <div class="hero-info">
+        <h2 class="secondary-title">Promo Title</h2>
+        <p class="mt-24">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua.
+        </p>
+        <a href="#" class="secondary-button mt-50">BOOK NOW</a>
+      </div>
     </div>
-    <div class="hero">
-      <div class="container">
-        <nav class="hero-menu">
-          <ul>
-            <li><a href="#">Lift tickets</a></li>
-            <li><a href="#">Season Passes</a></li>
-            <li class="active"><a href="#">Rentals</a></li>
-            <li><a href="#">Lessons</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>   
     <!-- HERO END -->
-
-    <!-- MENU -->
-    <div class="container pt-13">
-      <h1>Menu</h1>
-    </div>
-    <header class="active">
-      <div class="container px-0">
-        <div class="row">
-          <div class="col-3">
-            <img src="img/logo.svg" class="logo" alt="Logo Image" />
-          </div>
-          <div
-            class="col-9 d-flex justify-content-end align-content-center gap-3 gap-md-4"
-          >
-            <p class="trails">Trails: 37 | Lifts: 3</p>
-            <button><img src="img/plus.svg" alt="Plus icons" /></button>
-            <button>
-              <img
-                src="img/Icon_feather-shopping-cart.svg"
-                alt="Shopping cart icon"
-              />
-            </button>
-            <button class="hamburger" id="hamburger-btn">
-              <div class="line"></div>
-            </button>
-          </div>
-        </div>
-        <div class="row menu-show">
-          <!-- Primary Menu -->
-          <nav class="main-menu">
-            <ul class="primary">
-              <li class="order-2 order-md-1"><a href="#">SNOW REPORT</a></li>
-              <li class="order-3 order-md-2"><a href="#">TRAIL MAP</a></li>
-              <li class="order-4 order-md-3"><a href="#">EVENTS</a></li>
-              <li class="order-5 order-md-4"><a href="#">FIRST TIMERS GUIDE</a></li>
-              <li class="order-5 order-md-5"><a href="#">REAL STATE</a></li>
-              <li class="order-1 order-md-5">
-                <button class="search-btn">
-                  <input type="text" class="form-control input-yellow" placeholder="Search">
-                  <img src="img/search-icon.svg" alt="Search icon" />
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <!-- Secondary Menu -->
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">SHOPPING
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">THE MOUNTAIN
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">YOUR VISIT
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu active">TO DO
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-     <!-- MENU END -->
 
     <!-- COLORS -->
     <div class="container-xxl pt-13">
-      <h1>COLORS</h1>
-      <h2 class="pt-6">PRIMARY COLORS</h2>
-      <div class="row pt-3 gap-3 gap-md-2 gap-lg-1">
+      <h1>Colors</h1>
+      <h2 class="pt-6">Primary Colors</h2>
+      <div class="row pt-3 gap-cards-color">
         <div class="card-color">
-          <div class="color bg-red"></div>
-          <div class="info">R:182 G:0 B:54 - #B60036 - $red</div>
+          <div class="color bg-darkBlue"></div>
+          <div class="info">R:30 G:69 B:111 - #1E456F - $darkBlue</div>
         </div>
 
         <div class="card-color">
-          <div class="color bg-yellow"></div>
-          <div class="info">R:255 G:213 B:42 - #FFD52A - $yellow</div>
+          <div class="color bg-blue"></div>
+          <div class="info">R:44 G:111 B:183 - #2C6FB7 - $blue</div>
         </div>
 
         <div class="card-color">
-          <div class="color bg-yellow-dark"></div>
-          <div class="info">R:255 G:173 B:42 - #FFAD2A- $yellow2</div>
+          <div class="color bg-green"></div>
+          <div class="info">R:114 G:137 B:61 - #72893D- $green</div>
         </div>
       </div>
 
-      <h2 class="pt-6">SECONDARY COLORS</h2>
-      <div class="row pt-3 gap-3 gap-md-2 gap-lg-1">
+      <h2 class="pt-8">Secondary Colors</h2>
+      <div class="row pt-3 gap-cards-color">
         <div class="card-color">
           <div class="color bg-black"></div>
-          <div class="info">R:0 G:0 B:0 - #000000 - $black</div>
+          <div class="info">R:16 G:16 B:27 - #10101B - $black</div>
         </div>
 
         <div class="card-color">
-          <div class="color bg-dark"></div>
-          <div class="info">R:44 G:46 B:51 - #2C2E33- $dark</div>
+          <div class="color bg-river"></div>
+          <div class="info">R:77 G:177 B:169 - #4DB1A9- $river</div>
         </div>
 
         <div class="card-color">
-          <div class="color bg-white"></div>
-          <div class="info">R:239 G:244 B:248 - #EFF4F8- $light1</div>
+          <div class="color bg-forest"></div>
+          <div class="info">R:76 G:75 B:43 - #4C4B2B- $forest</div>
         </div>
 
         <div class="card-color">
-          <div class="color bg-gray shadow"></div>
-          <div class="info">R:222 G:234 B:244 - #EFF4F8- $light2</div>
+          <div class="color bg-orange"></div>
+          <div class="info">R:228 G:118 B:37 - #E47625- $orange</div>
+        </div>
+
+        <div class="card-color">
+          <div class="color bg-fog"></div>
+          <div class="info">R:191 G:191 B:192 - #bfbfc0- $fog</div>
+        </div>
+
+        <div class="card-color">
+          <div class="color bg-snow shadow"></div>
+          <div class="info">R:243 G:243 B:250 - #F3F4FA- $snow</div>
         </div>
       </div>
     </div>
-     <!-- COLORS END -->
-
+    <!-- COLORS END -->
 
     <!-- TEXT -->
     <div class="text-bg px-0 f-flex flex-column flex-md-row">
-      <div class="white">
+      <div class="left">
         <div class="info">
-          <h1>TEXT</h1>
-          <h2 class="pt-5">STYLES</h2>
-          <h5 class="text-uppercase">radio Canada font family</h5>
+          <h1>Text</h1>
+          <h2 class="pt-5">Body | <span>Noto Sans</span></h2>
           <p class="pt-6">
             A paragraph (from the Greek paragraphos, "to write beside" or
             "written beside") is a self-contained unit of a discourse in writing
@@ -379,8 +341,8 @@
           </p>
           <p><strong>Bold Paragraph</strong></p>
           <p><u>Underline sentence</u></p>
-          <p><a href="#" class="link-yellow">Link text 1</a></p>
-          <p><a href="#" class="link-red">Link text 1</a></p>
+          <p><a href="#" class="link-orange">Link text 1</a></p>
+          <p><a href="#" class="link-blue">Link text 1</a></p>
           <blockquote>“Blockquote text”</blockquote>
           <ul class="list-circle pt-3">
             <li>List item with bullet</li>
@@ -388,95 +350,78 @@
           <ul class="list-number pt-1">
             <li>List item with number</li>
           </ul>
-          <h2 class="pt-8">HEADINGS</h2>
-          <h1 class="pt-4">HEADING 1</h1>
-          <h2 class="pt-2">HEADING 2</h2>
-          <h3 class="pt-2">HEADING 3</h3>
-          <h4 class="pt-2">HEADING 4</h4>
-          <h5 class="pt-2">HEADING 5</h5>
         </div>
       </div>
-      <div class="dark">
+      <div class="rigth">
         <div class="info">
-          <h1>TEXT</h1>
-          <h2 class="pt-5">STYLES</h2>
-          <h5 class="text-uppercase">radio Canada font family</h5>
-          <p class="pt-6">
-            A paragraph (from the Greek paragraphos, "to write beside" or
-            "written beside") is a self-contained unit of a discourse in writing
-            dealing with a particular point or idea. A paragraph consists of one
-            or more sentences.
-          </p>
-          <p><strong>Bold Paragraph</strong></p>
-          <p><u>Underline sentence</u></p>
-          <p><a href="#" class="link-yellow">Link text 1</a></p>
-          <p><a href="#" class="link-red">Link text 1</a></p>
-          <blockquote>“Blockquote text”</blockquote>
-          <ul class="list-circle-yellow pt-3">
-            <li>List item with bullet</li>
-          </ul>
-          <ul class="list-number-yellow pt-1">
-            <li>List item with number</li>
-          </ul>
-          <h2 class="pt-8">HEADINGS</h2>
-          <h1 class="pt-4">HEADING 1</h1>
-          <h2 class="pt-2">HEADING 2</h2>
-          <h3 class="pt-2">HEADING 3</h3>
-          <h4 class="pt-2">HEADING 4</h4>
-          <h5 class="pt-2">HEADING 5</h5>
+          <h2 class="pt-2">Headings | <span>Gilroy</span></h2>
+          <h1 class="pt-4">Heading 1</h1>
+          <h2 class="pt-2">Heading 2</h2>
+          <h3 class="pt-2">Heading 3</h3>
+          <h4 class="pt-2">Heading 4</h4>
+          <h5 class="pt-2">Heading 5</h5>
+
+          <h2 class="pt-5">Secondary Headings | <span>Whiteoleander</span></h2>
+          <h2 class="secondary-title pt-3">Secondary Heading 1</h2>
         </div>
       </div>
     </div>
     <!-- TEXT END -->
 
     <!-- ICONS -->
-    <div class="container-xxl pt-13">
-      <h1>ICONS</h1>
-      <h4 class="text-regular pt-3">FEATHER ICONS</h4>
-      <div class="row pt-5 justify-content-start gap-3">
-        <img class="icons" src="img/plus-icon.svg" alt="Plus icon" />
-        <img
-          class="icons"
-          src="img/shopping-cart.svg"
-          alt="Shopping Cart icon"
-        />
-        <img
-          class="icons"
-          src="img/hamburguer-menu.svg"
-          alt="Menu Hamburguer Icon"
-        />
-        <img class="icons" src="img/map-icon.svg" alt="Map icon" />
-        <img class="icons" src="img/down-icon.svg" alt="Down icon" />
-        <img class="icons" src="img/instagram.svg" alt="Instagram icon" />
-        <img class="icons" src="img/facebook.svg" alt="facebook icon" />
-        <img class="icons" src="img/twiter.svg" alt="Twitter icon" />
-        <img class="icons" src="img/youtube.svg" alt="Youtube icon" />
-      </div>
-      <div class="row pt-5 justify-content-start gap-3">
-        <img class="icons" src="img/left-icon.svg" alt="Left Arrow icon" />
-        <img class="icons" src="img/right-icon.svg" alt="Right Arrow icon" />
-        <img class="icons" src="img/up-arrow.svg" alt="Up Arrow Icon" />
-        <img class="icons" src="img/down-arrow.svg" alt="Down Arrow Icon" />
-        <img class="icons" src="img/bottom-left-arrow.svg" alt="Down icon" />
-        <img class="icons" src="img//bottom-right-arrow.svg" alt="Arrow Icon" />
-        <img class="icons" src="img/up-left-arrow.svg" alt="Arrow Icon" />
-        <img class="icons" src="img/up-right-arrow.svg" alt="Arrow Icon" />
+    <div class="bg-white pb-150">
+      <div class="container-xxl pt-13">
+        <h1>Icons</h1>
+        <h4 class="text-regular pt-3">FEATHER ICONS</h4>
+        <div class="row pt-5 justify-content-start gap-3">
+          <img class="icons" src="img/plus-icon.svg" alt="Plus icon" />
+          <img
+            class="icons"
+            src="img/shopping-cart.svg"
+            alt="Shopping Cart icon"
+          />
+          <img
+            class="icons"
+            src="img/hamburguer-menu.svg"
+            alt="Menu Hamburguer Icon"
+          />
+          <img class="icons" src="img/map-icon.svg" alt="Map icon" />
+          <img class="icons" src="img/down-icon.svg" alt="Down icon" />
+          <img class="icons" src="img/instagram.svg" alt="Instagram icon" />
+          <img class="icons" src="img/facebook.svg" alt="facebook icon" />
+          <img class="icons" src="img/twiter.svg" alt="Twitter icon" />
+          <img class="icons" src="img/youtube.svg" alt="Youtube icon" />
+        </div>
+        <div class="row pt-5 justify-content-start gap-3">
+          <img class="icons" src="img/left-icon.svg" alt="Left Arrow icon" />
+          <img class="icons" src="img/right-icon.svg" alt="Right Arrow icon" />
+          <img class="icons" src="img/up-arrow.svg" alt="Up Arrow Icon" />
+          <img class="icons" src="img/down-arrow.svg" alt="Down Arrow Icon" />
+          <img class="icons" src="img/bottom-left-arrow.svg" alt="Down icon" />
+          <img
+            class="icons"
+            src="img//bottom-right-arrow.svg"
+            alt="Arrow Icon"
+          />
+          <img class="icons" src="img/up-left-arrow.svg" alt="Arrow Icon" />
+          <img class="icons" src="img/up-right-arrow.svg" alt="Arrow Icon" />
+        </div>
       </div>
     </div>
     <!-- ICONS END -->
 
     <!-- FORM ELEMENTS -->
-    <div class="container-xxl pt-300">
-      <h1>FORM ELEMENTS</h1>
+    <div class="container-xxl pt-150">
+      <h1>Form Elements</h1>
       <h2 class="pt-10">BUTTONS</h2>
       <!-- Buttons -->
       <div class="row pt-10">
         <div class="col-md-3">
-          <button class="main-button">Buy Now</button>
+          <button class="main-button">BOOK NOW</button>
           <p class="pt-3">btn main button</p>
         </div>
         <div class="col-md-3">
-          <button class="main-button-hover">Buy Now</button>
+          <button class="main-button-hover bg-blue">BOOK NOW</button>
           <p class="pt-3">btn main button - hover</p>
         </div>
         <div
@@ -501,11 +446,11 @@
       </div>
       <div class="row pt-10">
         <div class="col-md-3">
-          <button class="secondary-button">Buy Now</button>
+          <button class="secondary-button">BOOK NOW</button>
           <p class="pt-3">btn secondary button</p>
         </div>
         <div class="col-md-3">
-          <button class="secondary-button-hover">Buy Now</button>
+          <button class="secondary-button-hover bg-orange">BOOK NOW</button>
           <p class="pt-3">btn secondary button - hover</p>
         </div>
       </div>
@@ -517,14 +462,14 @@
           <label for="">Label</label>
           <input
             type="text"
-            class="form-control w-100 input-yellow mt-1"
+            class="form-control w-100 input-blue mt-1"
             placeholder="Placeholder"
           />
           <p class="pt-4">Inputfield</p>
         </div>
         <div class="col-md-3 mt-3 mt-md-0">
           <label for="">Label</label>
-          <select name="" id="" class="form-control input-yellow mt-1">
+          <select name="" id="" class="form-control input-blue mt-1">
             <option value="">Option</option>
           </select>
           <p class="pt-4">Select</p>
@@ -532,7 +477,7 @@
         <div class="col-md-6 mt-3 mt-md-0">
           <label for="">Label</label>
           <textarea
-            class="form-control input-yellow mt-1"
+            class="form-control input-blue mt-1"
             placeholder="Placeholder"
           ></textarea>
           <p class="pt-4">Textarea</p>
@@ -544,106 +489,135 @@
     <!-- IMAGES -->
     <div class="bg-dark-2 p-13 px-0 mt-140">
       <div class="container-xxl">
-        <h1>IMAGES</h1>
-        <h2 class="pt-8">HOMEPAGE HERO IMAGE</h2>
+        <h1>Images</h1>
+        <h2 class="pt-8">Homepage Hero Image</h2>
       </div>
 
-      <div class="hero-container mt-5">1920 x 450</div>
+      <div class="hero-container mt-5">1920 x 860</div>
       <div class="container-xxl pt-13">
         <div class="row gap-5 gap-md-0">
-          <div class="col-md-5 px-0">
-            <p>LISTING IMAGES</p>
-            <div class="listing-images">445 x 420</div>
+          <div class="col-md-12 px-0">
+            <h2>Listing Images</h2>
+            <div class="listing-images">445 x 400</div>
           </div>
-          <div class="col-md-6 px-0">
-            <p>PROMO IMAGES</p>
-            <div class="promo-images">600 x 420</div>
+          <div class="col-md-12 px-0 pt-13">
+            <h2>Promo Images</h2>
+            <div class="slideshow-images">1400 x 650</div>
           </div>
         </div>
       </div>
     </div>
     <!-- IMAGES END-->
 
-    
     <!-- SPACING -->
     <div class="container-xxl p-13 px-3 px-md-0">
-      <h1>SPACING</h1>
+      <h1>Spacing</h1>
       <h2 class="pt-5">HR</h2>
-      <hr class="hr-red" />
+      <hr class="hr-blue" />
       <p class="d-block mb-5">Hr over light bg</p>
-      <hr class="hr-yellow" />
+      <hr class="hr-orange" />
       <p class="d-block mb-5">Hr over dark bg</p>
 
-      <h2 class="pt-13">PADDING</h2>
+      <h2 class="pt-13">Padding</h2>
       <p class="pt-7 text-center text-md-start">x = 8</p>
       <!-- padding list start -->
-      <div class="row justify-content-between flex-column flex-md-row align-content-center">
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0" >
+      <div
+        class="row justify-content-between flex-column flex-md-row align-content-center"
+      >
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0"
+        >
           <p>x</p>
           <div class="pt-1 pl-1 bg-p-0"><p>8</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>1.5x</p>
           <div class="pt-1-5 pl-1-5 bg-p-1 min-content"><p>12</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>2x</p>
           <div class="pt-2 pl-2 bg-p-2"><p>16</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>3x</p>
           <div class="pt-3 pl-3 bg-p-3"><p>24</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>4x</p>
           <div class="pt-4 pl-4 bg-p-4"><p>32</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>5x</p>
           <div class="pt-5 pl-5 bg-p-5"><p>40</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>6x</p>
           <div class="pt-6 pl-6 bg-p-6"><p>48</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>7x</p>
           <div class="pt-7 pl-7 bg-p-7"><p>56</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>8x</p>
           <div class="pt-8 pl-8 bg-p-8"><p>64</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>10x</p>
           <div class="pt-10 pl-10 bg-p-10"><p>80</p></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>13x</p>
           <div class="pt-13 pl-13 bg-p-13"></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>16x</p>
           <div class="pt-16 pl-16 bg-p-13"></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>20x</p>
           <div class="pt-20 pl-20 bg-p-13"></div>
         </div>
 
-        <div class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0">
+        <div
+          class="text-center d-flex flex-column min-content align-items-center mx-auto mx-md-0 mt-3 mt-md-0"
+        >
           <p>25x</p>
           <div class="pt-25 pl-25 bg-p-13"></div>
         </div>
@@ -655,7 +629,7 @@
     <!-- TABLES -->
     <div class="bg-white p-13 px-0">
       <div class="container-xxl">
-        <h1>TABLES</h1>
+        <h1>Tables</h1>
 
         <div class="row pt-10">
           <div class="col-3">
@@ -701,89 +675,90 @@
         </div>
       </div>
     </div>
-     <!-- TABLES END-->
+    <!-- TABLES END-->
 
     <!-- FOOTER -->
     <footer>
-      <div class="decoration">
-        <img src="img/broomley-icon.svg" alt="broomley-icon" />
-      </div>
       <div class="container-xxl">
-        <div class="row">
-          <div class="col-md-4 text-center text-md-start">
-            <a href="" class="link-yellow d-block pt-2 pt-md-0">About</a>
-            <a href="" class="link-yellow d-block pt-2 pt-md-2">Donation</a>
+        <div class="row justify-content-between">
+          <div class="col-md-3 text-center text-md-start">
+            <h4>Follow Us</h4>
+
+            <div class="d-flex justify-content-between">
+              <a href="#">
+                <img src="img/instagram.svg" alt="Instagram Icon" />
+              </a>
+              <a href="#">
+                <img src="img/facebook.svg" alt="Facebook Icon" />
+              </a>
+              <a href="#">
+                <img src="img/twiter.svg" alt="Twiter Icon" />
+              </a>
+              <a href="#">
+                <img src="img/youtube.svg" alt="Youtube Icon" />
+              </a>
+            </div>
+
+            <h4 class="mt-5">Contact Info</h4>
+
+            <p class="mt-5">19 Resort Drive</p>
+            <p>Windham, NY 12496</p>
+
+            <p class="mt-5">1.800.754.9463</p>
+            <p>info@windhammountain.com</p>
           </div>
 
-          <div class="col-md-4 text-center">
-            <a href="" class="link-yellow d-block pt-2 pt-md-0">Media</a>
-            <a href="" class="link-yellow d-block pt-2 pt-md-2">Policies</a>
-          </div>
-
-          <div class="col-md-4 text-center text-md-end">
-            <a href="" class="link-yellow d-block pt-2 pt-md-0">Employment</a>
-            <a href="" class="link-yellow d-block pt-2 pt-md-2">Contact Us</a>
-          </div>
-        </div>
-        <hr />
-        <div class="row">
           <div
-            class="col-md-8 d-flex align-content-center text-white flex-column flex-md-row align-items-center gap-0 gap-3"
+            class="col-md-8 col-xxl-6 d-flex flex-column justify-content-between"
           >
-            <img src="img/map-icon.svg" class="svg-white icon" alt="Map icon" />
-            <p class="d-block pt-2 pl-0 pl-md-3 text-center">
-              3984 Vermont Rt. 11 Peru, VT 05152 802-824-5522
-            </p>
-          </div>
-          <div class="col-md-4 d-flex justify-content-between">
-            <a href="">
-              <img
-                src="img/instagram.svg"
-                class="svg-gray icon-social"
-                alt="Instagram Icon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="img/facebook.svg"
-                class="svg-gray icon-social"
-                alt="facebook Icon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="img/twiter.svg"
-                class="svg-gray icon-social"
-                alt="Twitter Icon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="img/youtube.svg"
-                class="svg-gray icon-social"
-                alt="Youtube Icon"
-              />
-            </a>
+            <div class="row text-center text-md-start mt-5 mt-md-0">
+              <div class="col-md-4 d-flex flex-column">
+                <h4>Navigation</h4>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+              </div>
+              <div class="col-md-4 d-flex flex-column mt-4 mt-md-0">
+                <h4>Navigation</h4>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+              </div>
+              <div class="col-md-4 d-flex flex-column mt-4 mt-md-0">
+                <h4>Navigation</h4>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+              </div>
+            </div>
+            <div class="text-center text-md-start mt-5 mt-md-0">
+              <h4>Keep in Touch</h4>
+              <form action="" class="d-flex flex-column flex-md-row gap-4 mt-4">
+                <input
+                  type="email"
+                  class="form-control w-100 input-blue mt-1"
+                  placeholder="Email"
+                />
+                <button type="submit" class="main-button mx-auto w-sm-100">
+                  SUBSCRIBE
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="copyrigth">
-        <div class="container-xxl d-flex align-items-end px-0">
-          <div class="row w-100 mx-auto">
-            <div class="col-md-6 text-white text-center text-md-start px-0">
-              <p class="p-0 m-0">2022 © Bromley Mountain Ski Resort</p>
-            </div>
-            <div
-              class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3 mt-3 mt-md-0"
-            >
-              <a href="" class="link-yellow">Web Accessibility</a>
-              <span class="link-yellow">|</span>
-              <a href="" class="link-yellow">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
+      <div class="bg-darkBlue py-4">
+        <img
+          src="img/white-logo.svg"
+          class="mx-auto d-block"
+          alt="White logo"
+        />
       </div>
     </footer>
+    <!-- FOOTER END -->
     <script src="js/app.js"></script>
   </body>
 </html>

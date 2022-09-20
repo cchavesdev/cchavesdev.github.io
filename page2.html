@@ -12,276 +12,356 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles/bundle.css" />
-    <title>Example 1</title>
+    <title>Page 2</title>
   </head>
-  <body>
-    <!-- Header -->
+  <body class="bg-white">
     <header>
-      <div class="container px-0">
-        <div class="row">
-          <div class="col-3">
-            <img src="img/logo.svg" class="logo" alt="Logo Image" />
+      <div class="container-xxl py-4">
+        <div class="row justify-content-between">
+          <div
+            class="col-3 col-lg-2 menu-nav col-xxl-1 d-flex align-items-center justify-content-between"
+          >
+            <button
+              class="hamburger-menu btn-trigger headerFn"
+              data-triger="main-nav"
+            >
+              <img src="img/hamburger.svg " alt="Hamburger button icon" />
+            </button>
+            <button class="search-btn">
+              <img src="img/search.svg" alt="Search icon" />
+            </button>
           </div>
           <div
-            class="col-9 d-flex justify-content-end align-content-center gap-3 gap-md-4 pt-1"
+            class="col-3 d-flex justify-content-end justify-content-lg-center logo-container"
           >
-            <p class="trails">Trails: 37 | Lifts: 3</p>
-            <button><img src="img/plus.svg" alt="Plus icons" /></button>
-            <button>
-              <img
-                src="img/Icon_feather-shopping-cart.svg"
-                alt="Shopping cart icon"
-              />
+            <a href="#" class="logo">
+              <img src="img/logo.svg" alt="Logo Windham" />
+            </a>
+          </div>
+          <div
+            class="col-lg-8 d-flex align-items-center justify-content-end gap-2 secundary-nav"
+          >
+            <button class="btn-trigger headerFn" data-triger="snow-report">
+              SNOW REPORT
             </button>
-            <button class="hamburger" id="hamburger-btn">
-              <div class="line"></div>
+            <button
+              class="main-button btn-trigger headerFn"
+              data-triger="book-now"
+            >
+              BOOK NOW
             </button>
+          </div>
+          <div class="col-3 close-menu d-flex justify-content-end d-none">
+            <button><img src="img/x-icon.svg" alt="Close icon" /></button>
           </div>
         </div>
-        <div class="row menu-show">
-          <!-- Primary Menu -->
-          <nav class="main-menu">
-            <ul class="primary">
-              <li class="order-2 order-md-1"><a href="#">SNOW REPORT</a></li>
-              <li class="order-3 order-md-2"><a href="#">TRAIL MAP</a></li>
-              <li class="order-4 order-md-3"><a href="#">EVENTS</a></li>
-              <li class="order-5 order-md-4">
-                <a href="#">FIRST TIMERS GUIDE</a>
-              </li>
-              <li class="order-5 order-md-5"><a href="#">REAL STATE</a></li>
-              <li class="order-1 order-md-5">
-                <button class="search-btn">
-                  <input
-                    type="text"
-                    class="form-control input-yellow"
-                    placeholder="Search"
-                  />
-                  <img src="img/search-icon.svg" alt="Search icon" />
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <!-- Secondary Menu -->
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">
-                SHOPPING
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+      </div>
+
+      <!-- Open Menu -->
+      <div class="main-menu div-trigger" data-triger="main-nav">
+        <div class="container-xxl">
+          <div class="row justify-content-center">
+            <nav class="col-12 col-md-6">
+              <ul>
+                <li class="dropdown-item-submenu">
+                  <span
+                    >On the Mountain
+                    <img src="img/up-blue.svg" alt="Up arrow image"
+                  /></span>
+                  <ul>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Webcams</a></li>
+                    <li><a href="">Trail Map</a></li>
+                    <li><a href="">Terrain Parks</a></li>
+                    <li><a href="">Mountain Stats</a></li>
+                    <li><a href="">Mountain Stories</a></li>
+                    <li><a href="">Uphill Access</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-item-submenu">
+                  <span
+                    >Plan and Book
+                    <img src="img/up-blue.svg" alt="Up arrow image"
+                  /></span>
+                  <ul>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Webcams</a></li>
+                    <li><a href="">Trail Map</a></li>
+                    <li><a href="">Terrain Parks</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-item-submenu">
+                  <span
+                    >During your Visit
+                    <img src="img/up-blue.svg" alt="Up arrow image"
+                  /></span>
+                  <ul>
+                    <li><a href="">Conditions</a></li>
+                    <li><a href="">Webcams</a></li>
+                    <li><a href="">Trail Map</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">
-                THE MOUNTAIN
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu">
-                YOUR VISIT
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <ul class="secondary-menu">
-              <li class="dropdown-item-submenu active">
-                TO DO
-                <ul>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                  <li>
-                    <a href="" class="link-yellow">Link</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+        </div>
+      </div>
+
+      <div class="menu-sections">
+        <!-- BOOK NOW FORM-->
+        <div class="hide-container div-trigger position-relative" data-triger="book-now">
+          <form action="">
+            <div class="container-xxl">
+              <div class="row justify-content-center">
+                <div class="col-md-3 mt-4 mt-lg-0">
+                  <div class="date-input">
+                    <input type="date" name="arribal" id="arribal" placeholder="Arribal" class="form-control input-blue"/>
+                    <label for="arribal">Arribal</label>
+                  </div>
+                </div>
+                <div class="col-md-3 mt-4 mt-lg-0">
+                  <div class="date-input">
+                    <input type="date" name="departure" id="departure" placeholder="Departure" class="form-control input-blue"/>
+                    <label for="departure">Departure</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center mt-4">
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="adults"
+                      id="adults"
+                      placeholder="Adults"
+                      class="form-control input-blue"
+                    />
+                    <button type="button">
+                      <img src="img/plus-blue.svg" alt="Plus icon" />
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-3 mt-4 mt-lg-0">
+                  <div class="form-group">
+                    <input
+                      type="number"
+                      name="children"
+                      id="children"
+                      placeholder="Children"
+                      class="form-control input-blue"
+                    />
+                    <button type="button">
+                      <img src="img/plus-blue.svg" alt="Plus icon" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center pt-5 btn-bookNow">
+                <div class="col-md-6 d-flex justify-content-end">
+                  <button type="submit" class="main-button">BOOK NOW</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- SNOW REPORT -->
+        <div class="hide-container div-trigger" data-triger="snow-report">
+          <div class="container-xxl">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <h2 class="f-36 text-center text-lg-start">Today’s Weather</h2>
+                <div class="row justify-content-between mt-5">
+                  <div class="col-md-5 d-flex justify-content-between pe-0 pe-lg-5">
+                    <div
+                      class="d-flex flex-column justify-content-between text-center info-snow-report"
+                    >
+                      <p class="item">HIGH</p>
+                      <p class="value">29º</p>
+                    </div>
+                    <img class="py-3" src="img/snow-icon.svg" alt="Snow icon" />
+                    <div
+                      class="d-flex flex-column justify-content-between text-center info-snow-report"
+                    >
+                      <p class="item">LOW</p>
+                      <p class="value">20º</p>
+                    </div>
+                  </div>
+                  <div class="col-md-2 d-flex justify-content-center">
+                    <div class="line border-r-blue"></div>
+                  </div>
+
+                  <div class="col-md-5 mt-5 mt-lg-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="info-snow-report d-flex align-items-center flex-column flex-lg-row">
+                        <p class="item">Lift</p>
+                        <p class="value pl-2">5</p>
+                      </div>
+                      <div class="info-snow-report d-flex align-items-center flex-column flex-lg-row">
+                        <p class="item">NEW SNOW</p>
+                        <p class="value pl-2">6”</p>
+                      </div>
+                      <div class="info-snow-report d-flex align-items-center flex-column flex-lg-row">
+                        <p class="item">TRAIL</p>
+                        <p class="value pl-2">49</p>
+                      </div>
+                    </div>
+                    <button class="main-button float-end full-report">FULL REPORT</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
-    <!-- Header END -->
+    <!-- HEADER END -->
 
     <!-- HERO -->
-    <div class="hero hero-white">
-      <div class="container">
-        <nav class="hero-menu menu-red">
-          <ul>
-            <li><a href="#">Lift tickets</a></li>
-            <li><a href="#">Season Passes</a></li>
-            <li class="active"><a href="#">Rentals</a></li>
-            <li><a href="#">Lessons</a></li>
-          </ul>
-        </nav>
+    <div class="hero-container hero">
+      <div class="buttons d-flex d-lg-none flex-column">
+        <button class="btn-trigger headerFn text-white" data-triger="snow-report">
+          SNOW REPORT
+        </button>
+        <button class="main-button btn-trigger headerFn btn-white mt-3 mb-5" data-triger="book-now">
+          BOOK NOW
+        </button>
       </div>
     </div>
     <!-- HERO END -->
 
-    <!-- GROUP 3 CARDS -->
-    <div class="cards-3-container">
-      <div class="card">
-        <img src="img/card-1.jpg" class="listing-images" alt="Image card 1" />
-        <h4>PROMO NAME</h4>
-        <a href="" class="main-button">Buy Now</a>
-      </div>
-      <div class="card">
-        <img src="img/card-2.jpg" class="listing-images" alt="Image card 2" />
-        <h4>PROMO NAME</h4>
-        <a href="" class="main-button">Buy Now</a>
-      </div>
-      <div class="card">
-        <img src="img/card-3.jpg" class="listing-images" alt="Image card 3" />
-        <h4>PROMO NAME</h4>
-        <a href="" class="main-button">Buy Now</a>
-      </div>
-    </div>
-    <!-- GROUP 3 CARDS END -->
-
-    <!-- MESSAGE -->
-    <div class="pt-13">
-      <div class="bg-litle-saying">
-        <div class="decoration">
-          <img src="img/broomley-icon.svg" alt="broomley-icon" />
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9 mx-auto px-0 px-lg-5">
-              <h4 class="text-uppercase">A Title <br class="d-block d-md-none"> Saying <br class="d-block d-md-none"> something</h4>
-              <p class=" pt-6">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum.
-                <a href="" class="link-red">Stet clita kasd gubergren</a>, no
-                sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua
-              </p>
-            </div>
+    <!-- FORM -->
+    <div class="container-xxl mt-80-responsive">
+      <form action="">
+        <div class="row">
+          <div class="col-md-3">
+            <select class="input-blue form-control" name="" id="">
+              <option value="Option">Option</option>
+            </select>
+          </div>
+          <div class="col-md-3 mt-4 mt-md-0">
+            <select class="input-blue form-control" name="" id="">
+              <option value="Option">Option</option>
+            </select>
+          </div>
+          <div class="col-md-3 mt-4 mt-md-0">
+            <select class="input-blue form-control" name="" id="">
+              <option value="Option">Option</option>
+            </select>
+          </div>
+          <div class="col-md-3 d-flex justify-content-center justify-content-md-end mt-5 mt-md-0">
+            <button class="main-button">BUTTON</button>
           </div>
         </div>
+      </form>
+    </div>
+    <!-- FORM END -->
+
+    <!-- CARDS LIST -->
+    <div class="container-xxl mt-footer">
+      <div class="row justify-content-between">
+        <div class="col-md-4 order-1 order-md-2">
+          <img src="img/card-1.jpg" class="img-fluid" alt="Card 1">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-2 order-md-1">
+          <h2 class="mt-3 mt-md-0">Promo Title</h2>
+          <p class="mt-3 mb-3 mb-md-5 gilroy">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+          <a href="#" class="main-button w-sm-100">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="row justify-content-between mt-5 pt-5">
+        <div class="col-md-4">
+          <img src="img/card-2.jpg" class="img-fluid" alt="Card 2">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2 class="mt-3 mt-md-0">Promo Title</h2>
+          <p class="mt-3 mb-3 mb-md-5 gilroy">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+          <a href="#" class="main-button w-sm-100">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="row justify-content-between mt-5 pt-5">
+        <div class="col-md-4 order-1 order-md-2">
+          <img src="img/card-3.jpg" class="img-fluid" alt="Card 3">
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center order-2 order-md-1">
+          <h2 class="mt-3 mt-md-0">Promo Title</h2>
+          <p class="mt-3 mb-3 mb-md-5 gilroy">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+          <a href="#" class="main-button w-sm-100">BOOK NOW</a>
+        </div>
       </div>
     </div>
-
+    <!-- CARDS LIST END -->
+    
     <!-- FOOTER -->
-    <footer>
-      <div class="decoration">
-        <img src="img/broomley-icon.svg" alt="broomley-icon" />
-      </div>
+    <footer class="mt-footer">
       <div class="container-xxl">
-        <div class="row">
-          <div class="col-md-4 text-center text-md-start">
-            <a href="" class="link-yellow d-block pt-2 pt-md-0">About</a>
-            <a href="" class="link-yellow d-block pt-2 pt-md-2">Donation</a>
+        <div class="row justify-content-between">
+          <div class="col-md-3 text-center text-md-start">
+            <h4>Follow Us</h4>
+
+            <div class="d-flex justify-content-between">
+              <a href="#">
+                <img src="img/instagram.svg" alt="Instagram Icon" />
+              </a>
+              <a href="#">
+                <img src="img/facebook.svg" alt="Facebook Icon" />
+              </a>
+              <a href="#">
+                <img src="img/twiter.svg" alt="Twiter Icon" />
+              </a>
+              <a href="#">
+                <img src="img/youtube.svg" alt="Youtube Icon" />
+              </a>
+            </div>
+
+            <h4 class="mt-5">Contact Info</h4>
+
+            <p class="mt-5">19 Resort Drive</p>
+            <p>Windham, NY 12496</p>
+
+            <p class="mt-5">1.800.754.9463</p>
+            <p>info@windhammountain.com</p>
           </div>
 
-          <div class="col-md-4 text-center">
-            <a href="" class="link-yellow d-block pt-2 pt-md-0">Media</a>
-            <a href="" class="link-yellow d-block pt-2 pt-md-2">Policies</a>
-          </div>
-
-          <div class="col-md-4 text-center text-md-end">
-            <a href="" class="link-yellow d-block pt-2 pt-md-0">Employment</a>
-            <a href="" class="link-yellow d-block pt-2 pt-md-2">Contact Us</a>
-          </div>
-        </div>
-        <hr />
-        <div class="row">
-          <div
-            class="col-md-8 d-flex align-content-center text-white flex-column flex-md-row align-items-center gap-0 gap-3"
-          >
-            <img src="img/map-icon.svg" class="svg-white icon" alt="Map icon" />
-            <p class="d-block pt-2 pl-0 pl-md-3 text-center">
-              3984 Vermont Rt. 11 Peru, VT 05152 802-824-5522
-            </p>
-          </div>
-          <div class="col-md-4 d-flex justify-content-between">
-            <a href="">
-              <img
-                src="img/instagram.svg"
-                class="svg-gray icon-social"
-                alt="Instagram Icon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="img/facebook.svg"
-                class="svg-gray icon-social"
-                alt="facebook Icon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="img/twiter.svg"
-                class="svg-gray icon-social"
-                alt="Twitter Icon"
-              />
-            </a>
-            <a href="">
-              <img
-                src="img/youtube.svg"
-                class="svg-gray icon-social"
-                alt="Youtube Icon"
-              />
-            </a>
+          <div class="col-md-8 col-xxl-6 d-flex flex-column justify-content-between">
+            <div class="row text-center text-md-start mt-5 mt-md-0">
+              <div class="col-md-4 d-flex flex-column">
+                <h4>Navigation</h4>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+              </div>
+              <div class="col-md-4 d-flex flex-column mt-4 mt-md-0">
+                <h4>Navigation</h4>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+              </div>
+              <div class="col-md-4 d-flex flex-column mt-4 mt-md-0">
+                <h4>Navigation</h4>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+                <a href="">Link</a>
+              </div>
+            </div>
+            <div class="text-center text-md-start mt-5 mt-md-0">
+              <h4>Keep in Touch</h4>
+              <form action="" class="d-flex flex-column flex-md-row gap-4 mt-4">
+                <input type="email" class="form-control w-100 input-blue mt-1" placeholder="Email" />
+                <button type="submit" class="main-button mx-auto w-sm-100">SUBSCRIBE</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="copyrigth">
-        <div class="container-xxl d-flex align-items-end px-0">
-          <div class="row w-100 mx-auto">
-            <div class="col-md-6 text-white text-center text-md-start px-0">
-              <p class="p-0 m-0">2022 © Bromley Mountain Ski Resort</p>
-            </div>
-            <div
-              class="col-md-6 d-flex justify-content-center justify-content-md-end gap-3 mt-3 mt-md-0"
-            >
-              <a href="" class="link-yellow">Web Accessibility</a>
-              <span class="link-yellow">|</span>
-              <a href="" class="link-yellow">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
+      <div class="bg-darkBlue py-4">
+        <img src="img/white-logo.svg" class="mx-auto d-block" alt="White logo">
       </div>
     </footer>
+    <!-- FOOTER END -->
     <script src="js/app.js"></script>
   </body>
 </html>

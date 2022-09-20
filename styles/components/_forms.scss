@@ -1,29 +1,43 @@
 //buttons
+button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: $blue;
+
+}
+
+
+a {
+  color: $blue;
+}
 @mixin button($color, $hover, $text-color) {
-  background-color: $color;
+  background-color: transparent;
   color: $text-color;
-  font-size: 20px;
+  border: 1px solid $color;
+  font-size: 16px;
+  text-align: center;
   padding: 13px 62px;
   width: max-content;
-  border: none;
+  border-radius: 28px;
   transition: all ease-in 0.2s;
   cursor: pointer;
   &:hover {
     background-color: $hover;
-    color: $text-color
+    color: white;
   }
 }
 .main-button {
-  @include button($yellow, $yellow2, $p-color);
+  @include button($blue, $blue, $blue);
 }
 .main-button-hover {
-  @include button($yellow2, $yellow2, $p-color);
+  @include button($blue, $blue, white);
 }
 .secondary-button {
-  @include button($red, #95002c, white);
+  @include button($orange, $orange, $orange);
 }
 .secondary-button-hover {
-  @include button(#95002c, #95002c, white);
+  @include button($orange, $orange, white);
 }
 
 //Form items
@@ -51,25 +65,25 @@ select {
   background-position-x: calc(100% - 24px);
 }
 select.primary-control {
-    background-image: url(../img/Icon_feather-chevron-down.svg);
-    background-repeat: no-repeat;
-    background-position: center right;
-    background-position-x: calc(100% - 24px);
+  background-image: url(../img/Icon_feather-chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-position-x: calc(100% - 24px);
 }
-.input-yellow{
-    border-bottom: 2px solid $yellow !important;
+.input-blue {
+  border-bottom: 2px solid $blue !important;
 }
-select.input-yellow {
-    background-image: url(../../img/down-icon.svg);
-    background-size: 18px;
+select.input-blue {
+  background-image: url(../../img/down-icon.svg);
+  background-size: 18px;
 }
-textarea.input-yellow {
-    padding-top: 10px;
-    border: 2px solid $yellow;
-    border-top: 0px solid;
+textarea.input-blue {
+  padding-top: 10px;
+  border: 2px solid $blue;
+  border-top: 0px solid;
 }
-label{
-    font-size: 18px;
+label {
+  font-size: 18px;
 }
 .container-checkbox {
   display: block;
@@ -83,7 +97,6 @@ label{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
 
   & input[type="checkbox"] {
     position: absolute;
@@ -101,12 +114,12 @@ label{
     height: 24px;
     width: 24px;
     background-color: transparent;
-    border: 2px solid $yellow;
+    border: 2px solid $blue;
   }
 
   /* When the checkbox is checked, add a blue background */
   & input:checked ~ .checkmark {
-    background-color: $yellow;
+    background-color: $blue;
   }
 
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -136,66 +149,135 @@ label{
 }
 
 .container-radio {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 19px;
-    
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 19px;
+
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & input[type="radio"] {
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  
-  
-    & input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-      height: 0;
-      width: 0;
-    }
-    /* Create a custom checkbox */
-  
-    & .checkmark {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 24px;
-      width: 24px;
-      background-color: transparent;
-      border: 2px solid $yellow;
-      border-radius: 24px;
-    }
-  
-    /* When the checkbox is checked, add a blue background */
-    & input:checked ~ .checkmark {
-      background-color: $yellow;
-    }
-  
-    /* Create the checkmark/indicator (hidden when not checked) */
-    & .checkmark:after {
-      content: "";
-      position: absolute;
-      display: none;
-    }
-  
-    /* Show the checkmark when checked */
-    & input:checked ~ .checkmark:after {
-      display: block;
-    }
-  
-    /* Style the checkmark/indicator */
-    & .checkmark:after {
-      left: 8px;
-      top: 5px;
-      width: 5px;
-      height: 10px;
-      border: solid white;
-      border-width: 0 3px 3px 0;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
+    height: 0;
+    width: 0;
   }
+  /* Create a custom checkbox */
+
+  & .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border: 2px solid $blue;
+    border-radius: 24px;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  & input:checked ~ .checkmark {
+    background-color: $blue;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  & .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  & input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  & .checkmark:after {
+    left: 8px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+//Form group function
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  & input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+  }
+  & button {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    margin-right: 17px;
+    cursor: pointer;
+  }
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/calendar.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+
+.btn-white{
+  border: 1px solid white;
+  color: white;
+}
+
+.date-input{
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  & label{
+    position: absolute;
+    left: 0;
+    margin-left: 22px;
+    opacity: .8;
+  }
+  & input{
+    color: transparent;
+  }
+
+  & input:focus + label{
+    display: none;
+  }
+}
+
+.date-input-active{
+  & input{
+    color: $p-color;
+  }
+  & label{
+    display: none;
+  }
+}

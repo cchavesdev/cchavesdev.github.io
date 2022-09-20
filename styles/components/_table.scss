@@ -1,9 +1,9 @@
 .table-yellow{
     & thead{
-        border-top: 2px solid $yellow;
-        border-bottom: 2px solid $yellow;
-        font-family: $radio-canada-semibold;
-
+        border-top: 2px solid $blue;
+        background-color: $blue;
+        font-family: $noto-sans-bold;
+        color: white;
         & th{
             padding: 24px 32px;
         }

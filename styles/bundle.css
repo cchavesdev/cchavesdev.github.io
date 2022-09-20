@@ -1,29 +1,40 @@
+/*Eliminar*/
+/*Eliminar*/
 @font-face {
-  font-family: "Radio Canada Regular";
-  src: url(../fonts/RadioCanada-Regular.ttf);
+  font-family: "Noto Sans Regular";
+  src: url(../fonts/NotoSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Radio Canada Bold";
-  src: url(../fonts/RadioCanada-Bold.ttf);
+  font-family: "Noto Sans Light";
+  src: url(../fonts/NotoSans-Light.ttf);
 }
 
 @font-face {
-  font-family: "Radio Canada Light";
-  src: url(../fonts/RadioCanada-Light.ttf);
+  font-family: "Noto Sans Bold";
+  src: url(../fonts/NotoSans-Bold.ttf);
 }
 
 @font-face {
-  font-family: "Radio Canada semibold";
-  src: url(../fonts/RadioCanada-SemiBold.ttf);
+  font-family: "Gilroy";
+  src: url(../fonts/Gilroy-Light.otf);
+}
+
+@font-face {
+  font-family: "White Oleandery";
+  src: url(../fonts/WhiteOleander.ttf);
 }
 
 .text-regular {
-  font-family: "Radio Canada Regular";
+  font-family: "Noto Sans Regular";
+}
+
+.gilroy {
+  font-family: "Gilroy";
 }
 
 strong {
-  font-family: "Radio Canada Bold";
+  font-family: "Noto Sans Bold";
 }
 
 a {
@@ -34,12 +45,24 @@ ul {
   list-style: none;
 }
 
+p {
+  line-height: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gilroy";
+}
+
 h1 {
   font-size: 64px;
 }
 
 h2 {
   font-size: 48px;
+}
+
+h2 span {
+  font-size: 24px;
 }
 
 h3 {
@@ -52,25 +75,32 @@ h4 {
 
 h5 {
   font-size: 24px;
-  font-family: "Radio Canada semibold";
 }
 
-.link-yellow {
-  color: #FFD52A;
+.secondary-title {
+  font-family: "White Oleandery";
+}
+
+.f-36 {
+  font-size: 36px;
+}
+
+.link-orange {
+  color: #E47625;
   text-decoration: underline;
 }
 
-.link-yellow:hover {
-  color: #FFD52A;
+.link-orange:hover {
+  color: #E47625;
 }
 
-.link-red {
-  color: #B60036;
+.link-blue {
+  color: #3D6EB2;
   text-decoration: underline;
 }
 
-.link-red:hover {
-  color: #B60036;
+.link-blue:hover {
+  color: #3D6EB2;
 }
 
 .list-circle {
@@ -156,8 +186,332 @@ p {
 }
 
 blockquote {
-  font-family: "Radio Canada Light";
+  font-family: "Noto Sans Light";
   font-size: 18px;
+}
+
+.lh-36 {
+  line-height: 36px;
+}
+
+button {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #2C6FB7;
+}
+
+a {
+  color: #2C6FB7;
+}
+
+.main-button {
+  background-color: transparent;
+  color: #2C6FB7;
+  border: 1px solid #2C6FB7;
+  font-size: 16px;
+  text-align: center;
+  padding: 13px 62px;
+  width: max-content;
+  border-radius: 28px;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  background-color: #2C6FB7;
+  color: white;
+}
+
+.main-button-hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #2C6FB7;
+  font-size: 16px;
+  text-align: center;
+  padding: 13px 62px;
+  width: max-content;
+  border-radius: 28px;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+.main-button-hover:hover {
+  background-color: #2C6FB7;
+  color: white;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #E47625;
+  border: 1px solid #E47625;
+  font-size: 16px;
+  text-align: center;
+  padding: 13px 62px;
+  width: max-content;
+  border-radius: 28px;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  background-color: #E47625;
+  color: white;
+}
+
+.secondary-button-hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #E47625;
+  font-size: 16px;
+  text-align: center;
+  padding: 13px 62px;
+  width: max-content;
+  border-radius: 28px;
+  transition: all ease-in 0.2s;
+  cursor: pointer;
+}
+
+.secondary-button-hover:hover {
+  background-color: #E47625;
+  color: white;
+}
+
+.form-control {
+  border-radius: 0px;
+  height: 56px;
+  background-color: rgba(75, 90, 128, 0.05);
+  border: none;
+  border-bottom: 2px solid #B60036 !important;
+  padding: 0px 24px 0px 24px;
+  position: relative;
+  font-size: 20px;
+  color: #10101B;
+}
+
+.form-control:focus {
+  background-color: rgba(75, 90, 128, 0.05);
+  border-color: none;
+  outline: none;
+  box-shadow: none;
+}
+
+select {
+  background-image: url(../img/Icon_feather-chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-position-x: calc(100% - 24px);
+}
+
+select.primary-control {
+  background-image: url(../img/Icon_feather-chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-position-x: calc(100% - 24px);
+}
+
+.input-blue {
+  border-bottom: 2px solid #2C6FB7 !important;
+}
+
+select.input-blue {
+  background-image: url(../../img/down-icon.svg);
+  background-size: 18px;
+}
+
+textarea.input-blue {
+  padding-top: 10px;
+  border: 2px solid #2C6FB7;
+  border-top: 0px solid;
+}
+
+label {
+  font-size: 18px;
+}
+
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 19px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.container-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: 2px solid #2C6FB7;
+}
+
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #2C6FB7;
+}
+
+.container-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-checkbox .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 19px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.container-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container-radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border: 2px solid #2C6FB7;
+  border-radius: 24px;
+}
+
+.container-radio input:checked ~ .checkmark {
+  background-color: #2C6FB7;
+}
+
+.container-radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-radio .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.form-group input::-webkit-outer-spin-button,
+.form-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-group input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.form-group button {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  margin-right: 17px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/calendar.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+}
+
+.btn-white {
+  border: 1px solid white;
+  color: white;
+}
+
+.date-input {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.date-input label {
+  position: absolute;
+  left: 0;
+  margin-left: 22px;
+  opacity: .8;
+}
+
+.date-input input {
+  color: transparent;
+}
+
+.date-input input:focus + label {
+  display: none;
+}
+
+.date-input-active input {
+  color: #242E35;
+}
+
+.date-input-active label {
+  display: none;
 }
 
 .container {
@@ -172,6 +526,23 @@ blockquote {
 
 .container-xxl {
   max-width: 1513px;
+  padding-left: 10px;
+}
+
+.bg-darkBlue {
+  background-color: #1E456F;
+}
+
+.bg-blue {
+  background-color: #2C6FB7;
+}
+
+.bg-green {
+  background-color: #72893D;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
 }
 
 .bg-red {
@@ -187,7 +558,27 @@ blockquote {
 }
 
 .bg-black {
-  background-color: #000000;
+  background-color: #10101B;
+}
+
+.bg-river {
+  background-color: #4DB1A9;
+}
+
+.bg-forest {
+  background-color: #4C4B2B;
+}
+
+.bg-orange {
+  background-color: #E47625;
+}
+
+.bg-fog {
+  background-color: #bfbfc0;
+}
+
+.bg-snow {
+  background-color: #F3F4FA;
 }
 
 .bg-dark {
@@ -211,34 +602,29 @@ blockquote {
   display: flex;
 }
 
-.text-bg .white,
-.text-bg .dark {
+.text-bg .left,
+.text-bg .rigth {
   width: 50%;
   display: flex;
   justify-content: flex-end;
   padding-top: 80px;
   padding-bottom: 110px;
-}
-
-.text-bg .white {
   background-color: #deeaf4;
   color: #232526;
 }
 
-.text-bg .white .info {
+.text-bg .left .info {
   max-width: 755px;
   padding-right: 125px;
 }
 
-.text-bg .dark {
-  background-color: #000000;
-  color: white;
+.text-bg .rigth {
   justify-content: flex-start;
+  padding-top: 207px;
 }
 
-.text-bg .dark .info {
+.text-bg .rigth .info {
   max-width: 755px;
-  padding-left: 272px;
 }
 
 .bg-p-0 {
@@ -439,8 +825,14 @@ blockquote {
   width: min-content;
 }
 
-.border-red {
-  border: 1px solid #B60036;
+.border-blue {
+  border: 1px solid #2C6FB7;
+}
+
+.border-r-blue {
+  border-right: 1px solid #2C6FB7;
+  width: 0px;
+  height: 100%;
 }
 
 .p-1 {
@@ -555,6 +947,10 @@ blockquote {
   padding-top: 200px;
 }
 
+.pt-150 {
+  padding-top: 150px;
+}
+
 .pt-300 {
   padding-top: 300px;
 }
@@ -623,17 +1019,33 @@ blockquote {
   padding-left: 300px;
 }
 
+.pb-150 {
+  padding-bottom: 150px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.mt-80-responsive {
+  margin-top: 80px;
+}
+
 .mt-140 {
   margin-top: 140px;
 }
 
-.hr-red {
-  border-top: 2px solid #B60036;
+.hr-blue {
+  border-top: 2px solid #2C6FB7;
   opacity: 1;
 }
 
-.hr-yellow {
-  border-top: 2px solid #FFD52A;
+.hr-orange {
+  border-top: 2px solid #E47625;
   opacity: 1;
 }
 
@@ -650,18 +1062,18 @@ blockquote {
 }
 
 @media (max-width: 1524px) {
-  .text-bg .white {
+  .text-bg .left {
     padding-left: 30px;
   }
-  .text-bg .white .info {
+  .text-bg .left .info {
     max-width: 100%;
     padding-right: 125px;
   }
-  .text-bg .dark {
+  .text-bg .rigth {
     justify-content: flex-start;
     padding-right: 30px;
   }
-  .text-bg .dark .info {
+  .text-bg .rigth .info {
     max-width: 100%;
     padding-left: 20%;
   }
@@ -674,15 +1086,24 @@ blockquote {
   .pt-63-responsive {
     padding-top: 32px;
   }
-  .text-bg .white,
-  .text-bg .dark {
+  .text-bg .left,
+  .text-bg .rigth {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
   }
+  .text-bg .left {
+    padding-bottom: 40px;
+  }
+  .text-bg .rigth {
+    padding-top: 0px;
+  }
   .text-bg .info {
     padding-left: 16px !important;
     padding-right: 16px !important;
+  }
+  .mt-80-responsive {
+    margin-top: 40px;
   }
 }
 
@@ -699,161 +1120,116 @@ blockquote {
 .card-color .info {
   font-size: 18px;
   color: white;
-  background-color: #24272B;
+  background-color: #242E35;
   padding: 25px 1px;
   text-align: center;
 }
 
-.card {
-  border: none;
-  background-color: transparent;
+.gap-cards-color {
+  gap: 64px 20px;
 }
 
-.card-individual {
-  text-align: center;
-  margin-top: 80px;
-  max-width: 444px;
-  width: 100%;
-}
-
-.card-individual h4 {
-  margin-top: 48px;
-}
-
-.card-individual a {
-  margin-top: 40px;
-}
-
-.cards-3-container {
-  display: flex;
-}
-
-.cards-3-container .card {
-  width: calc(100% / 3);
-  text-align: center;
-}
-
-.cards-3-container .card .listing-images {
-  max-width: 100%;
-}
-
-.cards-3-container .card h4 {
-  margin-top: 46px;
-}
-
-.cards-3-container .card a {
+.card-simple a {
   width: max-content;
-  margin: 0 auto;
-  margin-top: 46px;
 }
 
-.card-promo {
-  background-image: url(../img/card-4.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 1400px;
-  width: 100%;
-  height: 530px;
-  margin: 0 auto;
-  margin-top: 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 64px;
-  color: white;
+.carousel-control-next-icon {
+  background-image: url(../img/white-left.svg);
 }
 
-.card-promo a {
-  margin-top: 48px;
+.carousel-control-prev-icon {
+  background-image: url(../img/white-rigth.svg);
 }
 
-.bg-litle-saying {
-  background-color: #DEEAF4;
-  padding: 112px;
-  background-image: url(../img/decorations-squre.svg);
-  background-repeat: no-repeat;
-  position: relative;
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
 }
 
-.bg-litle-saying .decoration {
-  width: 56px;
-  height: 56px;
-  background-color: #B60036;
-  display: flex;
-  justify-content: center;
+.carousel-indicators {
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  transform: rotate(45deg);
-  margin-top: -27px;
+  gap: 27px;
 }
 
-.bg-litle-saying .decoration img {
-  width: 17px;
-  transform: rotate(-45deg);
+.carousel-indicators [data-bs-target] {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
 }
 
-@media (max-width: 789px) {
-  .cards-3-container {
-    flex-direction: column;
-  }
-  .cards-3-container .card {
+.carousel-indicators .active {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.carousel-item {
+  min-height: 500px;
+}
+
+.carousel-item img {
+  min-height: 500px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.card-primary {
+  max-width: 1513px;
+  margin: 0 auto;
+  margin-top: 140px;
+}
+
+.card-primary h2 {
+  color: #3D6EB2;
+  text-align: center;
+  opacity: .5;
+}
+
+.card-primary hr {
+  max-width: 96px;
+  margin: 0 auto;
+  opacity: .5;
+  margin-top: 25px;
+}
+
+.card-primary p {
+  max-width: 1158px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 155px;
+  font-family: "Gilroy";
+  padding: 0px 15px;
+}
+
+@media (max-width: 600px) {
+  .card-simple a {
     width: 100%;
-    margin-top: 64px;
   }
-  .cards-3-container .card h4 {
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 24px;
+  }
+  .carousel-control-next {
+    margin-right: 30px;
+  }
+  .carousel-control-prev {
+    margin-left: 30px;
+  }
+  .card-primary {
+    margin-top: 63px;
+  }
+  .card-primary h2 {
+    font-size: 32px;
+  }
+  .card-primary hr {
+    display: none;
+  }
+  .card-primary p {
     margin-top: 24px;
-  }
-  .cards-3-container .card a {
-    margin-top: 32px;
-  }
-  .cards-3-container .card:first-child {
-    margin-top: 0px;
-  }
-  .card-promo {
-    text-align: center;
-    padding: 16px;
-  }
-  .card-promo a {
-    width: 100%;
-    margin-top: 24px;
-  }
-  .bg-litle-saying {
-    padding: 0px;
-    padding-top: 80px;
-    padding-bottom: 104px;
-    background-image: none;
-    background-repeat: no-repeat;
-    position: relative;
-    line-height: 42px;
-  }
-  .bg-litle-saying p {
-    padding-top: 40px !important;
-  }
-  .bg-litle-saying .decoration {
-    width: 56px;
-    height: 56px;
-    background-color: #B60036;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    transform: rotate(45deg);
-    margin-top: -27px;
-  }
-  .bg-litle-saying .decoration img {
-    width: 17px;
-    transform: rotate(-45deg);
+    margin-bottom: 48px;
+    text-align: left;
   }
 }
 
@@ -863,91 +1239,14 @@ blockquote {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 450px;
-}
-
-.hero-menu {
-  border-bottom: 1px solid rgba(44, 46, 51, 0.3);
-}
-
-.hero-menu ul {
-  display: flex;
-  justify-content: center;
-  padding: 0px;
-  margin: 0px;
-}
-
-.hero-menu ul li {
-  padding: 16px;
-}
-
-.hero-menu ul li a {
-  color: #2C2E33;
-  font-family: "Radio Canada semibold";
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-.hero-menu ul li.active,
-.hero-menu ul li:hover {
-  border-bottom: 2px solid #B60036;
-}
-
-.hero-menu ul li.active a,
-.hero-menu ul li:hover a {
-  color: #B60036;
-}
-
-.hero {
-  height: 450px;
-  background-image: url(../img/bg-hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.hero .hero-menu {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.hero .hero-menu ul li a {
-  color: white;
-  font-family: "Radio Canada semibold";
-}
-
-.hero .hero-menu ul li.active,
-.hero .hero-menu ul li:hover {
-  border-bottom: 2px solid #FFD52A;
-}
-
-.hero .hero-menu ul li.active a,
-.hero .hero-menu ul li:hover a {
-  color: #FFD52A;
-}
-
-.hero-white {
-  background-image: url(../img/bg-hero-white.jpg);
-  background-position: top;
-}
-
-.hero-white .menu-red ul li a {
-  color: #24272B !important;
-}
-
-.hero-white .menu-red ul li.active,
-.hero-white .menu-red ul li:hover {
-  border-bottom: 2px solid #B60036 !important;
-}
-
-.hero-white .menu-red ul li.active a,
-.hero-white .menu-red ul li:hover a {
-  color: #B60036 !important;
+  height: 860px;
 }
 
 .listing-images {
   max-width: 445px;
   width: 100%;
   background-color: white;
-  height: 420px;
+  height: 400px;
   object-fit: cover;
   display: flex;
   justify-content: center;
@@ -955,11 +1254,11 @@ blockquote {
   font-size: 50px;
 }
 
-.promo-images {
-  max-width: 600px;
+.slideshow-images {
+  max-width: 1400px;
   width: 100%;
   background-color: white;
-  height: 420px;
+  height: 650px;
   object-fit: cover;
   display: flex;
   justify-content: center;
@@ -970,33 +1269,16 @@ blockquote {
 @media (max-width: 635px) {
   .hero-container {
     font-size: 50px;
-    height: 350px;
-  }
-  .hero-menu ul {
-    justify-content: space-between;
-    padding-top: 16px;
-  }
-  .hero-menu ul li {
-    padding: 0px;
-  }
-  .hero-menu ul li a {
-    font-family: "Radio Canada Regular" !important;
-    font-size: 12px;
-  }
-  .hero-menu ul li.active a,
-  .hero-menu ul li:hover a {
-    font-family: "Radio Canada Bold" !important;
-  }
-  .hero {
-    height: 350px;
-    background-position: center;
+    height: max-content;
+    min-height: 812px;
   }
 }
 
 .table-yellow thead {
-  border-top: 2px solid #FFD52A;
-  border-bottom: 2px solid #FFD52A;
-  font-family: "Radio Canada semibold";
+  border-top: 2px solid #2C6FB7;
+  background-color: #2C6FB7;
+  font-family: "Noto Sans Bold";
+  color: white;
 }
 
 .table-yellow thead th {
@@ -1012,573 +1294,284 @@ blockquote {
   padding: 20px 32px;
 }
 
-header {
-  padding: 16px 0px 16px 0px;
-  transition: background-color ease-in .2s;
-}
-
-header .trails {
-  font-size: 18px;
-}
-
-header button {
-  border: none;
-  background: transparent;
-  width: 20px;
-  height: 20px;
-}
-
-header button img {
-  height: 20px;
-}
-
-header .gap-4 {
-  gap: 40px !important;
-}
-
-header .hamburger {
-  width: 20px;
-  height: 20px;
-}
-
-header .hamburger .line {
-  width: 20px;
-  height: 3px;
-  border-radius: 8px;
-  background-color: #B60036;
+.close-menu {
   position: relative;
-  transition: all ease-in .3s;
+  z-index: 11;
 }
 
-header .hamburger .line::after {
-  content: "";
+header {
   position: absolute;
+  width: 100%;
+  background-color: #EFF4F8;
+  z-index: 2;
+}
+
+header .logo-container {
+  position: absolute;
+  margin: 0 auto;
   left: 0;
-  top: 10px;
-  width: 11px;
-  height: 3px;
-  border-radius: 8px;
-  background-color: #B60036;
-  transition: all ease-in .3s;
+  right: 0;
+}
+
+header .logo-container .logo {
+  position: relative;
+  z-index: 11;
 }
 
 header .main-menu {
-  padding: 0px;
-  border-bottom: 1px solid #FFD52A;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #EFF4F8;
+  top: 0;
+  padding-top: 150px;
+  transform: translateY(-100%);
+  transition: transform ease-in 0.2s;
 }
 
-header .main-menu ul {
+header .main-menu .dropdown-item-submenu {
+  font-size: 48px;
+  margin-top: 15px;
+}
+
+header .main-menu .dropdown-item-submenu span {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 0px;
-  margin: 0px;
+  cursor: pointer;
 }
 
-header .main-menu ul li:first-child {
-  padding-left: 0px;
+header .main-menu .dropdown-item-submenu span img {
+  transition: all ease-in 0.2s;
 }
 
-header .main-menu ul li:last-child {
-  padding-right: 0px;
-}
-
-header .main-menu ul li {
-  padding: 16px;
-}
-
-header .main-menu ul li a {
-  color: white;
-  font-family: "Radio Canada semibold";
-  font-size: 20px;
-  text-transform: uppercase;
-}
-
-header .main-menu ul li.active a,
-header .main-menu ul li:hover a {
-  color: #FFD52A;
-}
-
-header .main-menu .search-btn {
-  padding-left: 5px;
-  padding-right: 5px;
-  width: max-content;
-}
-
-header .main-menu .search-btn input {
-  display: none;
-}
-
-header .secondary-menu {
-  padding-left: 0px;
-  padding-top: 30px;
-}
-
-header .secondary-menu li {
-  font-size: 18px;
-  color: white;
-}
-
-header .secondary-menu ul {
-  padding-left: 0px;
-}
-
-header .secondary-menu ul li {
-  margin-top: 16px;
-}
-
-header .secondary-menu ul a {
-  color: #FFD52A;
-}
-
-header .menu-show {
-  transition: all ease-in .3s;
-  min-height: 0px;
+header .main-menu .dropdown-item-submenu ul {
   max-height: 0px;
   overflow: hidden;
+  transition: all ease-in 0.2s;
 }
 
-header.active {
-  background-color: #000000;
+header .main-menu .dropdown-item-submenu ul li {
+  font-size: 24px;
+  padding: 10px 0px;
 }
 
-header.active .logo {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(48deg) brightness(111%) contrast(100%);
+header .main-menu .dropdown-item-submenu ul li a {
+  color: #242E35;
 }
 
-header.active .trails {
+header .main-menu .active {
+  color: #2C6FB7;
+}
+
+header .main-menu .active span img {
+  transform: rotate(180deg);
+}
+
+header .main-menu .active ul {
+  max-height: 1000px;
+}
+
+header .menu-sections .hide-container {
+  position: absolute;
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all ease-in 0.3s;
+  background-color: #EFF4F8;
+}
+
+header .menu-sections .active {
+  max-height: 100vh;
+  padding: 54px 0px;
+}
+
+header .active {
+  transform: translateY(0);
+  max-height: 100vh;
+}
+
+header .info-snow-report {
+  color: #4b4a2f;
+}
+
+header .info-snow-report .item {
+  font-size: 16px;
+}
+
+header .info-snow-report .value {
+  font-size: 32px;
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero .hero-info {
+  background-color: #10101B;
+  min-width: 775px;
   color: white;
-}
-
-header.active button img {
-  filter: brightness(0) saturate(100%) invert(90%) sepia(37%) saturate(3755%) hue-rotate(333deg) brightness(106%) contrast(101%);
-}
-
-header.active .hamburger {
-  margin-top: 5px;
-  width: 22px;
-}
-
-header.active .hamburger .line {
-  width: 22px;
-  background-color: #FFD52A;
-  transform: rotate(45deg);
-}
-
-header.active .hamburger .line::after {
-  content: "";
-  top: 0px;
-  width: 22px;
-  background-color: #FFD52A;
-  transform: rotate(-90deg);
-}
-
-header.active .menu-show {
+  padding: 64px 64px 80px 64px;
   display: flex;
-  max-height: 2000px;
-  min-height: 100px;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 48px;
+  margin-bottom: -87px;
 }
 
-@media (max-width: 767px) {
-  header .logo {
-    width: 59px;
+.hero .hero-info p {
+  font-family: "Gilroy";
+  width: 100%;
+  max-width: 440px;
+}
+
+.hero .hero-info::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #67ada7;
+  background: linear-gradient(180deg, #67ada7 0%, #67ada7 16%, #758646 16%, #758646 37%, #27456b 37%, #27456b 60%, #3d6eb2 60%, #3d6eb2 85%, #d47b3a 85%);
+}
+
+@media (max-width: 992px) {
+  header .logo-container {
+    position: static;
+    margin: 0px;
   }
-  header .trails {
-    font-size: 15px;
+  header .logo-container .logo {
+    z-index: 1;
   }
-  header button {
-    width: 15px;
-    height: 15px;
+}
+
+@media (max-width: 992px) {
+  .secundary-nav {
+    display: none !important;
   }
-  header button img {
-    height: 15px;
+}
+
+@media (max-width: 858px) {
+  .full-report {
+    width: 100%;
   }
-  header .hamburger {
-    width: 15px;
-    height: 15px;
+  .menu-nav {
+    position: relative;
+    z-index: 11;
   }
-  header .hamburger .line {
-    width: 15px;
-    height: 2px;
+  header {
+    position: fixed;
   }
-  header .hamburger .line::after {
-    top: 7px;
-    height: 2px;
+  header .main-menu {
+    position: fixed;
+    padding-top: 90px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.9), white);
   }
   header .main-menu ul {
-    flex-direction: column;
+    padding: 0px;
   }
-  header .main-menu ul li {
-    padding: 8px !important;
-    margin-top: 8px;
+  header .main-menu .dropdown-item-submenu {
+    font-size: 32px;
+    margin-top: 25px;
   }
-  header .main-menu .search-btn {
+  header .main-menu .dropdown-item-submenu ul li {
+    font-size: 20px;
+  }
+  header .main-menu .active {
+    min-height: auto;
+  }
+  header .active {
+    min-height: 100vh;
+  }
+  .btn-bookNow {
+    position: absolute;
+    bottom: 0;
+    z-index: 12;
+    margin-bottom: 106px;
     width: 100%;
+  }
+  .btn-bookNow button {
+    width: 100%;
+  }
+  .hero {
+    background-image: url(../img/hero.jpg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+  }
+  .hero .hero-info {
     position: relative;
-    height: auto;
+    width: 100%;
+    padding: 50px 20px;
+    min-width: 100px;
+    margin-right: 0px;
+    margin-bottom: 0px;
   }
-  header .main-menu .search-btn input {
-    color: white;
-    display: block;
-    background-color: #262626;
+  .hero .hero-info p {
+    font-family: "Gilroy";
+    width: 100%;
+    max-width: 440px;
+    font-size: 16px;
   }
-  header .main-menu .search-btn input::-webkit-input-placeholder {
-    color: white;
-  }
-  header .main-menu .search-btn img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 18px;
-    margin-right: 20px;
-    width: 20px;
-    height: 20px;
-  }
-  header .secondary-menu .dropdown-item-submenu {
-    position: relative;
-  }
-  header .secondary-menu .dropdown-item-submenu::after {
-    content: '';
-    position: absolute;
-    background-image: url(../img/down-icon.svg);
-    filter: invert(80%) sepia(87%) saturate(480%) hue-rotate(336deg) brightness(100%) contrast(102%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 0;
-    right: 0;
-    margin-top: 5px;
-    height: 0;
-    width: 22px;
-    height: 15px;
-    transition: transform ease-in .2s;
-  }
-  header .secondary-menu .dropdown-item-submenu ul {
-    transform: scaleY(0);
-    transform-origin: top;
-    height: 0;
-    overflow: hidden;
-    transition: transform ease-in .2s;
-  }
-  header .secondary-menu .active {
-    color: white;
-    font-size: 18px;
-  }
-  header .secondary-menu .active::after {
-    transform: rotate(-180deg);
-  }
-  header .secondary-menu .active ul {
-    height: auto;
-    transform: scaleY(1);
-  }
-  header.active .hamburger .line {
-    width: 16px;
-  }
-  header.active .hamburger .line::after {
-    top: 0px;
-    width: 16px;
+  .hero .hero-info a {
+    width: 100%;
+    text-align: center;
   }
 }
 
-.main-button {
-  background-color: #FFD52A;
-  color: #24272B;
-  font-size: 20px;
-  padding: 13px 62px;
-  width: max-content;
-  border: none;
-  transition: all ease-in 0.2s;
-  cursor: pointer;
-}
-
-.main-button:hover {
-  background-color: #FFAD2A;
-  color: #24272B;
-}
-
-.main-button-hover {
-  background-color: #FFAD2A;
-  color: #24272B;
-  font-size: 20px;
-  padding: 13px 62px;
-  width: max-content;
-  border: none;
-  transition: all ease-in 0.2s;
-  cursor: pointer;
-}
-
-.main-button-hover:hover {
-  background-color: #FFAD2A;
-  color: #24272B;
-}
-
-.secondary-button {
-  background-color: #B60036;
-  color: white;
-  font-size: 20px;
-  padding: 13px 62px;
-  width: max-content;
-  border: none;
-  transition: all ease-in 0.2s;
-  cursor: pointer;
-}
-
-.secondary-button:hover {
-  background-color: #95002c;
-  color: white;
-}
-
-.secondary-button-hover {
-  background-color: #95002c;
-  color: white;
-  font-size: 20px;
-  padding: 13px 62px;
-  width: max-content;
-  border: none;
-  transition: all ease-in 0.2s;
-  cursor: pointer;
-}
-
-.secondary-button-hover:hover {
-  background-color: #95002c;
-  color: white;
-}
-
-.form-control {
-  border-radius: 0px;
-  height: 56px;
-  background-color: rgba(75, 90, 128, 0.05);
-  border: none;
-  border-bottom: 2px solid #B60036 !important;
-  padding: 0px 24px 0px 24px;
-  position: relative;
-  font-size: 20px;
-  color: #000000;
-}
-
-.form-control:focus {
-  background-color: rgba(75, 90, 128, 0.05);
-  border-color: none;
-  outline: none;
-  box-shadow: none;
-}
-
-select {
-  background-image: url(../img/Icon_feather-chevron-down.svg);
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-position-x: calc(100% - 24px);
-}
-
-select.primary-control {
-  background-image: url(../img/Icon_feather-chevron-down.svg);
-  background-repeat: no-repeat;
-  background-position: center right;
-  background-position-x: calc(100% - 24px);
-}
-
-.input-yellow {
-  border-bottom: 2px solid #FFD52A !important;
-}
-
-select.input-yellow {
-  background-image: url(../../img/down-icon.svg);
-  background-size: 18px;
-}
-
-textarea.input-yellow {
-  padding-top: 10px;
-  border: 2px solid #FFD52A;
-  border-top: 0px solid;
-}
-
-label {
-  font-size: 18px;
-}
-
-.container-checkbox {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 19px;
-  cursor: pointer;
-  font-size: 22px;
-  user-select: none;
-  /* Create a custom checkbox */
-  /* When the checkbox is checked, add a blue background */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
-}
-
-.container-checkbox input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.container-checkbox .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 24px;
-  background-color: transparent;
-  border: 2px solid #FFD52A;
-}
-
-.container-checkbox input:checked ~ .checkmark {
-  background-color: #FFD52A;
-}
-
-.container-checkbox .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container-checkbox input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container-checkbox .checkmark:after {
-  left: 8px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-}
-
-.container-radio {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 19px;
-  cursor: pointer;
-  font-size: 22px;
-  user-select: none;
-  /* Create a custom checkbox */
-  /* When the checkbox is checked, add a blue background */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
-}
-
-.container-radio input[type="radio"] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.container-radio .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 24px;
-  width: 24px;
-  background-color: transparent;
-  border: 2px solid #FFD52A;
-  border-radius: 24px;
-}
-
-.container-radio input:checked ~ .checkmark {
-  background-color: #FFD52A;
-}
-
-.container-radio .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container-radio input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container-radio .checkmark:after {
-  left: 8px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+.mt-footer {
+  margin-top: 148px;
 }
 
 footer {
-  background-color: #000000;
-  position: relative;
-  padding-top: 64px;
+  background-color: #10101B;
+  color: white;
+  padding-top: 80px;
 }
 
-footer .decoration {
-  width: 56px;
-  height: 56px;
-  background-color: #B60036;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  transform: rotate(45deg);
-  margin-top: -27px;
+footer .row img {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(48deg) brightness(123%) contrast(116%);
 }
 
-footer .decoration img {
-  width: 17px;
-  transform: rotate(-45deg);
+footer a {
+  color: #67ADA7;
+  text-decoration: underline;
+  margin-top: 20px;
 }
 
-footer hr {
-  border-top: 2px solid #EFF4F8;
-  opacity: .2;
-  margin-top: 49px;
-  margin-bottom: 40px;
+footer a:hover {
+  color: #67ADA7;
 }
 
-footer .icon {
-  width: 27px;
+footer .input-blue {
+  background-color: transparent;
+  color: white;
 }
 
-footer .icon-social {
-  width: 40px;
+footer .bg-darkBlue {
+  margin-top: 80px;
 }
 
-footer .copyrigth {
-  min-height: 90px;
-  display: flex;
-  align-content: flex-end;
-  padding: 22px;
-  background-color: #232429;
-  margin-top: 67px;
-}
-
-footer .copyrigth .link-yellow {
-  text-decoration: none;
-}
-
-@media (max-width: 767px) {
-  footer .row {
-    padding-left: 15px;
-    padding-right: 15px;
+@media (max-width: 600px) {
+  footer .bg-darkBlue {
+    margin-top: 48px;
   }
-  footer hr {
-    margin-top: 24px;
-    margin-bottom: 24px;
+  .mt-footer {
+    margin-top: 64px;
   }
 }
 
 body {
-  font-family: "Radio Canada Regular";
-  color: #24272B;
+  font-family: "Noto Sans Regular";
+  color: #242E35;
   background-color: #EFF4F8;
 }
 /*# sourceMappingURL=bundle.css.map */
