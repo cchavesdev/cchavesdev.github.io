@@ -1,0 +1,32 @@
+[
+    {
+      "postTitle": "Naming Conventions",
+      "category": "react",
+      "description" : "A brief summary of the naming standard for a React App."
+    },
+    {
+      "postTitle": "Typescript",
+      "category": "react",
+      "description" : "How to use typescript into a React project."
+    },
+    {
+      "postTitle": "Secret Keys",
+      "category": "react",
+      "description": "Use enviroment variables to store keys or password."
+    },
+    {
+      "postTitle": "Allow CORS",
+      "description": "Allow a React App to connect at your REST API in Net 6.",
+      "category": "dotnet"
+    },
+    {
+        "postTitle": "Load data from JSON file",
+        "category": "react",
+        "description": "Load data from a flat JSON file into a React project very easly."
+      },
+      {
+        "postTitle": "React Router",
+        "category": "react",
+        "description": "First steps setting up a React router."
+      }
+  ]

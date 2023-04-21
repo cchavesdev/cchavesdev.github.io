@@ -1,0 +1,22 @@
+.content-app{
+  /* background-color: black; */
+  /* color: #fff; */
+  max-width: 80%;
+  margin: auto;
+}
+.custom-sizing{
+  width: 25px;
+  
+}
+.doc-link{
+  cursor: pointer;
+  text-decoration: none;
+  color: initial;
+}
+p, h1,h2,h3,h4,h5{
+  margin: 0;
+}
+
+.portfolio-img{
+  max-height: 400px;
+}
