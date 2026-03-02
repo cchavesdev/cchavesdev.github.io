@@ -11,7 +11,7 @@ const HeroSection = () => {
           <span className="text-muted-foreground font-light">Zamora</span>
         </h1>
         <p className="text-lg text-muted-foreground max-w-lg mx-auto mb-10 leading-relaxed">
-          Building reliable software with full-stack development, cloud infrastructure, test automation, and AI tooling.
+          8+ years building robust solutions across full-stack development, cloud infrastructure, test automation, and AI-powered tooling.
         </p>
         <div className="flex items-center justify-center gap-4">
           <a
