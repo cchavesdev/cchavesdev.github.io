@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Carlos Chaves Zamora — Software Engineer</title>
+    <script>
+      // Single Page App redirect for GitHub Pages
+      // Encodes the path into a query string so the server serves index.html
+      // which then restores the original path via the script in index.html
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/?/' +
+        l.pathname.slice(1).replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+</html>
