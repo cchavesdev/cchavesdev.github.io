@@ -1,23 +1,13 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const posts = [
   {
-    title: "Designing Resilient CI/CD Pipelines for Microservices",
-    excerpt: "Lessons learned from migrating a monolith to a distributed system with zero-downtime deployments.",
-    date: "Feb 2026",
-    href: "#",
-  },
-  {
-    title: "How I Use AI to Write Better Tests",
-    excerpt: "A practical guide to integrating LLMs into your test automation workflow without sacrificing reliability.",
-    date: "Jan 2026",
-    href: "#",
-  },
-  {
-    title: "Infrastructure as Code: Beyond the Basics",
-    excerpt: "Advanced Terraform patterns for managing multi-environment cloud setups at scale.",
-    date: "Dec 2025",
-    href: "#",
+    title: "I Wasted Months Tracking My Money the Hard Way. Then I Built Slothi, My Own AI Agent.",
+    excerpt: "I got tired of juggling cash, cards, and mobile payments across multiple apps. So I built an AI assistant that understands voice notes, receipt photos, and screenshots — all through WhatsApp.",
+    date: "Apr 2026",
+    slug: "SlothiAIAgent",
+    image: "/images/slothi.min.png",
   },
 ];
 
@@ -30,11 +20,19 @@ const BlogSection = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((post, i) => (
-            <a
+            <Link
               key={i}
-              href={post.href}
-              className="fade-up group block p-6 rounded-xl border border-border bg-card hover:border-accent/40 transition-colors duration-300"
+              to={`/blog/${post.slug}`}
+              className="fade-up group block rounded-xl border border-border bg-card hover:border-accent/40 transition-colors duration-300 overflow-hidden"
             >
+              {post.image && (
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-40 object-cover"
+                />
+              )}
+              <div className="p-6">
               <p className="text-xs text-muted-foreground mb-3">{post.date}</p>
               <h3 className="font-semibold text-foreground mb-2 leading-snug group-hover:text-accent transition-colors">
                 {post.title}
@@ -45,7 +43,8 @@ const BlogSection = () => {
               <span className="inline-flex items-center gap-1 text-xs font-medium text-accent">
                 Read more <ArrowRight size={12} />
               </span>
-            </a>
+              </div>
+            </Link>
           ))}
         </div>
       </div>

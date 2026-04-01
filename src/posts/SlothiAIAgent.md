@@ -1,0 +1,112 @@
+---
+layout: post
+title: "I Wasted Months Tracking My Money the Hard Way. Then I Built Slothi, My Own AI Agent."
+date: 2026-04-01
+author: Carlos Chaves
+tags: [ai, agents, whatsapp, langchain, automation, slothi, evolution-api, gemini, groq]
+description: "I got tired of juggling cash, cards, and mobile payments across multiple apps. So I built an AI assistant that understands voice notes, receipt photos, and screenshots — all through WhatsApp."
+---
+
+# I Wasted Months Tracking My Money the Hard Way. Then I Built Slothi, My Own AI Agent.
+
+![Slothi AI Agent](/images/slothi.min.png)
+
+Here's a question: how do you know what you spent last month?
+
+If you're like me, the answer is *you don't* — not really. I pay some things in cash, others with Sinpe Móvil, and the rest with a credit card. That's three different systems, none of which talk to each other. On top of that, I have recurring bills (electricity, phone, loans) and I could never confidently answer a simple question: **did I already pay that, or not?**
+
+I tried budgeting apps. I tried spreadsheets. I tried "just remembering." None of it survived the daily rush.
+
+So I asked a different question: *what if I could just tell someone what I paid — by text, voice, or photo — and they'd handle the rest?*
+
+That "someone" turned out to be an AI agent I built myself. I call it **Slothi** — named after Costa Rica's iconic sloth. Looks relaxed, but never stops working.
+
+## Why WhatsApp, Not an App
+
+I considered building a mobile app. But think about what logging an expense in an app looks like: open the app, tap "new expense," pick a category from a dropdown, type the amount, maybe add a note, hit save. That's six steps for a single transaction.
+
+Now think about WhatsApp: open a chat, send "paid electricity ₡32,000." Done.
+
+Even better — sometimes I just snap a photo of a receipt and send it. Or I record a 5-second voice note while driving: *"Slothi, record a payment of the loan."* The agent figures out the rest.
+
+WhatsApp isn't just convenient. It's the one app that's already open on my phone all day, every day. Meeting users where they are isn't a cliché — it's an architecture decision.
+
+## The Stack: Open Source and (Mostly) Free
+
+I wanted to learn, not just solve the problem. So I chose tools I hadn't used before and kept costs near zero.
+
+```
+WhatsApp (Evolution API)
+        ↓ POST /webhook
+   webhook.ts
+  ├── text   → keyword filter
+  ├── voice  → Groq Whisper → transcript
+  └── image  → Gemini Vision → extracted text
+        ↓ message buffer (10s debounce)
+   agent.ts (LangChain)
+  ├── Primary:  Gemini 2.5 Flash
+  ├── Fallback: Groq Llama 3.3
+  └── Last:     Claude Haiku
+        ↓ LangChain tools
+   Google Sheets
+  ├── Pagos / HistorialPagos
+  ├── Gastos
+  ├── Ahorros / HistorialAhorros
+  └── Personas
+        ↓ reply
+WhatsApp (Evolution API)
+```
+
+**Evolution API** is an open-source WhatsApp bridge — self-hosted via Docker, it gives you a REST API for sending and receiving messages. **LangChain** orchestrates the agent logic. **Google Sheets** acts as the database (surprisingly effective for personal-scale data). And the AI models? All free-tier.
+
+The key design choice: every input type — text, voice, image — converges into a single text string before hitting the agent. The LLM never needs to know *how* the message arrived. It just sees intent and data.
+
+## The Details and Lessons Learned
+
+Anyone can draw an architecture diagram. The real story is in the problems you hit and how you solve them. Here are five that shaped the system.
+
+### Don't Trust LLMs With Math
+
+When I asked "what payments are pending this month?", the agent had to cross-reference two sheets: recurring payments and payment history, filtered by the current month. Groq got this wrong constantly — reporting already-paid items as pending or missing ones entirely.
+
+The fix was: move the logic into a dedicated tool (`get_pending_payments`) that fetches both sheets and computes the diff in code. The LLM's only job became *calling* the tool, not *doing* the math. Let code do what code is good at. Let LLMs do what LLMs are good at.
+
+### Non-ASCII Characters Will Betray You
+
+One of my tools had a parameter named `año` (Spanish for "year"). Worked perfectly with Gemini and Groq. Then I added Claude Haiku as a fallback, and the entire request started failing with a cryptic 400 error.
+
+Turns out Anthropic's API enforces a strict regex on property names: `^[a-zA-Z0-9_.-]{1,64}$`. No `ñ` allowed. The fix was renaming it to `anio`. The lesson: when building multi-provider systems, design your interfaces around the **strictest** provider's constraints — not the most flexible one.
+
+### Circuit Breakers Aren't Just for Microservices
+
+My original fallback logic was reactive: try Gemini, get a 429 (rate limit), then try Groq. This meant every message during a quota window wasted a round-trip on a call guaranteed to fail.
+
+A simple in-memory circuit breaker fixed it: if Gemini fails with a quota error, skip it for the next hour. The circuit resets automatically. Failure is information — use it to make smarter routing decisions for the *next* request, not just the current one.
+
+### Similar Tool Names Confuse Models
+
+The agent had `get_lessons` (read-only) and `add_lesson` (write, takes parameters). Groq kept calling `get_lessons` but passing it `add_lesson`'s parameters. Better descriptions didn't help. The model was pattern-matching on name similarity and ignoring the schema entirely.
+
+The fix: remove `add_lesson` from Groq's tool list altogether. If a model can't reliably distinguish two similar tools, don't rely on better prompting — make the ambiguity impossible.
+
+### Caption Is Intent, Image Is Data
+
+When someone sends a receipt photo with a caption like "registra un pago de electricidad" both the caption and the extracted receipt text reach the agent. Early on, the agent would sometimes hyperfocus on amounts and dates from the image and lose track of what the user actually wanted.
+
+One sentence in the system prompt fixed it: *"If the message contains user context followed by extracted image content, always treat the user context as the primary intent."* In multimodal inputs, the human's words always outrank the machine's extraction. Make that hierarchy explicit.
+
+## What I'd Do Differently
+
+If I started over tomorrow, I'd structure the Google Sheets schema more carefully upfront. I'd also add proper logging from day one — debugging a multi-model agent through WhatsApp messages alone is not fun.
+
+But honestly? The "just start and iterate" approach worked. Slothi began as a single text-in, text-out loop. Voice came later. Images came later. The fallback chain came later. Each feature was additive, not a rewrite.
+
+## What's Next
+
+I'm working on receipt scanning improvements (better extraction of Costa Rican invoice formats), and multi-model routing that picks the cheapest model capable of handling each specific request. For visualizing the data, I'm currently using a Google Sheets dashboard secured with my Google account — no extra infrastructure needed, and the data stays private.
+
+If you're interested in the technical details of any specific part — the Evolution API setup, the LangChain tool definitions, the circuit breaker pattern — let me know. I'm planning to break those down into their own posts.
+
+---
+
+*Carlos Chaves is a Software Engineer based in Costa Rica, building at the intersection of AI, automation, and everyday problem-solving. You can find him at [cchavesdev.github.io](https://cchavesdev.github.io).*

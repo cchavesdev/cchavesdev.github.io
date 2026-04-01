@@ -1,19 +1,16 @@
-import { useState, type FormEvent } from "react";
+import { useEffect } from "react";
 import { Github, Linkedin, Send } from "lucide-react";
 import { toast } from "sonner";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactSection = () => {
-  const [sending, setSending] = useState(false);
+  const [state, handleSubmit] = useForm("maqljkge");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
+  useEffect(() => {
+    if (state.succeeded) {
       toast.success("Message sent! I'll get back to you soon.");
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
-  };
+    }
+  }, [state.succeeded]);
 
   return (
     <section id="contact" className="section-padding">
@@ -52,6 +49,7 @@ const ContactSection = () => {
                 className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring/30 transition"
                 placeholder="your@email.com"
               />
+              <ValidationError field="email" errors={state.errors} className="text-xs text-destructive mt-1" />
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">
@@ -65,14 +63,15 @@ const ContactSection = () => {
                 className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring/30 transition resize-none"
                 placeholder="What's on your mind?"
               />
+              <ValidationError field="message" errors={state.errors} className="text-xs text-destructive mt-1" />
             </div>
             <button
               type="submit"
-              disabled={sending}
+              disabled={state.submitting}
               className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
             >
               <Send size={14} />
-              {sending ? "Sending..." : "Send Message"}
+              {state.submitting ? "Sending..." : "Send Message"}
             </button>
           </form>
 
